@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="{{language}}">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{title}}</title>
+  <link rel="stylesheet" href="../src/style.css" />
+
+  <meta name="description" content="{{ translate 'description' language }}" />
+  <meta property="og:site_name" content="{{title}}" />
+  <meta property="og:url" content="{{url}}" />
+  <meta property="og:title" content="{{title}}" />
+  <meta property="og:image" content="{{url}}/emma-hero.41e467d9.webp" />
+  <meta property="og:description" content="{{ translate 'description' language }}" />
+
+  <link fetchpriority="high" href="../src/assets/emma-hero.webp" rel="preload" as="image"/>
+  <link fetchpriority="high" href="../src/assets/rosette.svg" rel="preload" as="image"/>
+</head>
+
+<body>
+  {{>nav}}
+  {{>hero}}
+  <main>
+    {{{body}}}
+  </main>
+  {{>footer}}
+  <script type="module" src="../src/index.js"></script>
+</body>
+
+</html>

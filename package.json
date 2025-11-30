@@ -1,0 +1,33 @@
+{
+  "name": "emma",
+  "description": "Emma Campás website",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "author": {
+    "name": "Diego Caponera",
+    "email": "hello@diegocaponera.com",
+    "url": "https://www.diegocaponera.com"
+  },
+  "scripts": {
+    "start": "npx concurrently 'npm run dev:site' 'npm run dev:client'",
+    "dev:client": "parcel output/*.html",
+    "build:client": "parcel build output/*.html",
+    "clean": "rm -rf dist output",
+    "dev:generate": "node ./generate.js",
+    "dev:site": "npx nodemon -e js,json,md,handlebars --watch data --watch src --watch index.js",
+    "build:site": "node index.js",
+    "build": "npm run build:site && npm run build:client",
+    "rosette": "npx nodemon rosette.js"
+  },
+  "dependencies": {
+    "motion": "^12.23.24"
+  },
+  "devDependencies": {
+    "goffre": "^0.0.3",
+    "lodash": "^4.17.21",
+    "marked": "^17.0.0",
+    "parcel": "^2.14.0",
+    "sharp": "^0.33.5"
+  }
+}

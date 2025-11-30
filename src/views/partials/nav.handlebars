@@ -1,0 +1,46 @@
+<button class="navToggler" aria-label="Toggle Navigation" type="button"></button>
+<nav class="nav">
+  <ul class="sections">
+    <li>
+      <a href="#dates">{{ translate 'sections.dates' language }}</a>
+    </li>
+    <li>
+      <a href="#about">{{ translate 'sections.about' language }}</a>
+    </li>
+    <li>
+      <a href="#awards">{{ translate 'sections.awards' language }}</a>
+    </li>
+    <li>
+      <a href="#music">{{ translate 'sections.music' language }}</a>
+    </li>
+    <li>
+      <a href="#contact">{{ translate 'sections.contact' language }}</a>
+    </li>
+  </ul>
+  <ul class="languages">
+    <li>
+      <a class="{{geLangClass 'en' language}}" href="/">{{ translate 'languages.english' 'common' }}</a>
+    </li>
+    <li>
+      <a class="{{geLangClass 'ed' language}}" href="/de">{{ translate 'languages.german' 'common' }}</a>
+    </li>
+    <li>
+      <a class="{{geLangClass 'es' language}}" href="/es">{{ translate 'languages.spanish' 'common' }}</a>
+    </li>
+    <li>
+      <a class="{{geLangClass 'ca' language}}" href="/ca">{{ translate 'languages.catalan' 'common' }}</a>
+    </li>
+  </ul>
+  <ul class="links">
+    <li>
+      <a href="{{ links.youtube }}" target="_blank">
+        <img alt="Youtube Link" src="../src/assets/icons/youtube.svg" width="24" height="24"/>
+      </a>
+    </li>
+    <li>
+      <a href="{{ links.instagram }}" target="_blank">
+        <img alt="Instagram Link" src="../src/assets/icons/instagram.svg" width="16" height="16"/>
+      </a>
+    </li>
+  </ul>
+</nav>

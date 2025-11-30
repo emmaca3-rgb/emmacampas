@@ -1,0 +1,41 @@
+<section class="section contact" id="contact">
+  <div class="container">
+    <div class="content">
+      <h2>{{ translate 'sections.contact' language }}</h2>
+      <p>
+        {{{ translate 'contact.description' language }}}
+      </p>
+      <form class="contact-form">
+        <label>
+          {{ translate 'contact.form.name.label' language }}
+          <input
+            type="text"
+            name="name"
+            placeholder="{{ translate 'contact.form.name.placeholder' language }}"
+            required/>
+        </label>
+
+        <label>
+          {{ translate 'contact.form.email.label' language }}
+          <input type="email" name="email" placeholder="{{ translate 'contact.form.email.placeholder' language }}" required />
+        </label>
+
+        <label>
+          {{ translate 'contact.form.subject.label' language }}
+          <input type="text" name="subject" placeholder="{{ translate 'contact.form.subject.placeholder' language }}" required />
+        </label>
+
+        <label>
+          {{ translate 'contact.form.message.label' language }}
+          <textarea name="message" placeholder="{{ translate 'contact.form.message.placeholder' language }}"
+            rows="10" required></textarea>
+        </label>
+
+        <button>
+          {{ translate 'contact.form.submit' language }}
+        </button>
+        
+      </form>
+    </div>
+  </div>
+</section>

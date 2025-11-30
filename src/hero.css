@@ -1,0 +1,104 @@
+.hero {
+  background-color: var(--background-color);
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  .image {
+    position: absolute;
+    inset: 0;
+    background-image: url("./assets/emma-hero.webp");
+    background-position: -300px 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0;
+  }
+
+  .strings {
+    width: var(--strings-size);
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50vw;
+    transform: translateX(-50%);
+
+    span {
+      background-color: var(--strings-color);
+      border-right: 0.5px solid rgba(0, 0, 0, 0.4);
+      height: 100%;
+      &:nth-child(1) {
+        width: 4px;
+      }
+      &:nth-child(2) {
+        width: 3px;
+      }
+      &:nth-child(3) {
+        width: 3px;
+      }
+      &:nth-child(4) {
+        width: 2px;
+      }
+      &:nth-child(5) {
+        width: 2px;
+      }
+      &:nth-child(6) {
+        width: 1px;
+      }
+    }
+  }
+
+  .soundhole {
+    background-image: url("../src/assets/rosette.svg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: var(--soundhole-size);
+    height: var(--soundhole-size);
+    position: absolute;
+    bottom: 40vh;
+    left: 50vw;
+    transform: translateX(-50%);
+    transform-origin: 0 50%;
+  }
+
+  .bridge {
+    background-color: var(--bridge-color);
+    position: absolute;
+    bottom: 10vh;
+    left: 50vw;
+    transform: translateX(-50%);
+    width: var(--bridge-width);
+    height: var(--bridge-height);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    gap: 0.5rem;
+    color: white;
+    font-family: var(--serif);
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+    .name {
+      font-weight: 500;
+      font-size: 2rem;
+    }
+    .description {
+      font-style: italic;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .hero {
+    .image {
+      background-position: center;
+    }
+  }
+}

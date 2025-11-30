@@ -1,0 +1,84 @@
+{
+  "common": {
+    "languages": {
+      "english": "en",
+      "german": "de",
+      "spanish": "es",
+      "catalan": "ca"
+    }
+  },
+  "en": {
+    "title": "Emma Campàs",
+    "subtitle": "Classical Guitar and Flamenco",
+    "description": "This is the website of Emma Campàs, classical and flamenco guitarist.",
+    "sections": {
+      "about": "About",
+      "dates": "Concerts",
+      "awards": "Awards",
+      "music": "Music",
+      "contact": "Contact"
+    },
+    "music": {
+      "description": "Here you can find a selection of her performances."
+    },
+    "contact": {
+      "description": "You can reach out through the form below or via e-mail at <a href='mailto:emmaca3@gmail.com'>emmaca3@gmail.com</a>.",
+      "form": {
+        "name": {
+          "label": "Your Name",
+          "placeholder": "Enter your name"
+        },
+        "email": {
+          "label": "Your E-Mail",
+          "placeholder": "Enter your e-mail"
+        },
+        "subject": {
+          "label": "Subject",
+          "placeholder": "E.g. Booking Request"
+        },
+        "message": {
+          "label": "Message",
+          "placeholder": "What you want to write me"
+        },
+        "submit": "Send Message"
+      }
+    }
+  },
+  "es": {
+    "title": "Emma Campàs",
+    "subtitle": "Guitarra clásica y flamenca",
+    "description": "Bienvenido a la pagina de Emma Campàs, guitarrista clasica y flamenca.",
+    "sections": {
+      "about": "Sobre ella",
+      "dates": "Próximas fechas",
+      "awards": "Reconocimientos",
+      "music": "Música",
+      "contact": "Contactos"
+    },
+    "music": {
+      "description": "Aqui tienes una selección de sus actuaciones."
+    },
+    "contact": {
+      "description": "Puedes escribir aqui, o por correo electronico: <a href='mailto:emmaca3@gmail.com'>emmaca3@gmail.com</a>.",
+      "form": {
+        "name": {
+          "label": "Tu nombre",
+          "placeholder": "Como te llamas"
+        },
+        "email": {
+          "label": "Tu E-Mail",
+          "placeholder": "Tu correo electronico"
+        },
+        "subject": {
+          "label": "Asunto",
+          "placeholder": "A ver que quieres"
+        },
+        "message": {
+          "label": "Mensaje",
+          "placeholder": "Corta el rollo"
+        },
+        "submit": "Enviar mensaje"
+      }
+    }
+  }
+}
