@@ -6,4 +6,8 @@ Digna sucesora de la mejor tradición de este instrumento, explora nuevos terren
 
 Durante su formación musical, Emma apostó por un enfoque poliédrico que le llevaría a interpretar tanto el estilo clásico como el flamenco. Su repertorio es un velatorio amplio desde el Renacimiento hasta las creaciones contemporáneas poniendo énfasis en la música de la península ibérica.
 
-Actualmente estudia en la [«Robert Schumann Hochschule für Musik»](https://www.rsh-duesseldorf.de/) (Máster-Düsseldorf) y recibe orientación artística de [Alexander Ramírez](http://www.alexander-sergei-ramirez.com/biographie_sp.htm), Eduardo Inestal y [Joaquín Clerch](https://www.joaquinclerch.com/es/).
+Actualmente estudia en la [«Robert Schumann Hochschule für Musik»][1] (Máster-Düsseldorf) y recibe orientación artística de [Alexander Ramírez][2], Eduardo Inestal y [Joaquín Clerch][3].
+
+[1]: https://www.rsh-duesseldorf.de/
+[2]: http://www.alexander-sergei-ramirez.com/biographie_sp.htm
+[3]: https://www.joaquinclerch.com/es/
