@@ -50,6 +50,11 @@ body {
 }
 
 body {
+  &:not(.page-homepage) {
+    main {
+      padding-top: 3rem;
+    }
+  }
   &.loading {
     height: 100vh;
     overflow: hidden;

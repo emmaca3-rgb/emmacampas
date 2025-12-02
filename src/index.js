@@ -55,24 +55,19 @@ window.addEventListener("DOMContentLoaded", async () => {
       document.body.classList.toggle("isNavOpen")
     );
 
-  document.querySelectorAll(".nav .sections a").forEach((el) =>
-    el.addEventListener("click", (event) => {
-      event.preventDefault();
-      document.body.classList.toggle("isNavOpen");
-      const targetSection = event.target.href.split("#").at(-1);
-      document.getElementById(targetSection)?.scrollIntoView({
-        behavior:
-          window.innerWidth <= SMALL_VIEWPORT_THRESHOLD ? "instant" : "smooth",
-      });
-    })
-  );
-
   const nav = document.querySelector(".nav");
 
   window.addEventListener("scroll", () => {
     nav.classList.toggle("scrolled", window.scrollY > NAV_SCROLL_THRESHOLD);
     document.body.classList.remove("isNavOpen");
   });
+
+  if (!document.querySelector(".hero")) {
+    animate(".nav, .navToggler", {
+      opacity: 1,
+    });
+    return;
+  }
 
   document.body.classList.add("loading");
 

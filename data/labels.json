@@ -12,6 +12,7 @@
     "subtitle": "Classical Guitar and Flamenco",
     "description": "This is the website of Emma Campàs, classical and flamenco guitarist.",
     "sections": {
+      "homepage": "Home",
       "about": "About",
       "dates": "Concerts",
       "awards": "Awards",
@@ -22,7 +23,6 @@
       "description": "Here you can find a selection of her performances."
     },
     "contact": {
-      "description": "You can reach out through the form below or via e-mail at <a href='mailto:emmaca3@gmail.com'>emmaca3@gmail.com</a>.",
       "form": {
         "name": {
           "label": "Your Name",
@@ -49,8 +49,9 @@
     "subtitle": "Guitarra clásica y flamenca",
     "description": "Bienvenido a la pagina de Emma Campàs, guitarrista clasica y flamenca.",
     "sections": {
+      "homepage": "Inicio",
       "about": "Sobre ella",
-      "dates": "Próximas fechas",
+      "dates": "Conciertos",
       "awards": "Reconocimientos",
       "music": "Música",
       "contact": "Contactos"
@@ -59,7 +60,6 @@
       "description": "Aqui tienes una selección de sus actuaciones."
     },
     "contact": {
-      "description": "Puedes escribir aqui, o por correo electronico: <a href='mailto:emmaca3@gmail.com'>emmaca3@gmail.com</a>.",
       "form": {
         "name": {
           "label": "Tu nombre",

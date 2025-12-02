@@ -1,4 +1,5 @@
 ---
+id: awards
 title: Awards and Prizes
 ---
 
