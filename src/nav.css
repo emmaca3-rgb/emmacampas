@@ -3,6 +3,7 @@
   top: 0;
   right: 0;
   left: 0;
+  opacity: 0;
   height: var(--navbar-height);
   display: flex;
   align-items: center;
@@ -10,7 +11,7 @@
   gap: 2rem;
   z-index: 1;
   padding: 0 2rem;
-  opacity: 0;
+  background-color: white;
   letter-spacing: 0.02rem;
   transition: transform 0.2s ease-in-out, background 0.2s ease-in-out;
 
@@ -64,7 +65,7 @@
     transform: translateY(-100%);
     height: auto;
     inset: 0;
-    gap: 4rem;
+    gap: 3rem;
     background-color: var(--background-color);
     flex-direction: column;
     justify-content: center;
@@ -78,6 +79,7 @@
       flex-direction: column;
       width: 100%;
       text-align: center;
+      gap: 1.5rem;
       li {
         width: 100%;
         a {
@@ -88,7 +90,6 @@
     }
     .links {
       gap: 0.5rem;
-      flex-direction: column;
       scale: 2;
     }
   }

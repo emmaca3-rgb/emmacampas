@@ -5,33 +5,34 @@ import _ from "lodash";
 
 const { json, pages } = await load();
 
-const byLanguage = pages.reduce((memo, page) => {
-  const [language, id] = page.slug.split("/");
-  return {
-    ...memo,
-    [language]: memo[language]
-      ? { ...memo[language], [id]: page }
-      : { [id]: page },
-  };
-}, {});
+const productionURL = "https://emmacampas.com";
+const defaultLanguage = "en";
+const languages = [...new Set(pages.map((x) => getLanguageFromSlug(x.slug)))];
 
 const translate = (key, language) =>
   _.get(json.labels, `${language}.${key}`) || key;
 
 const helpers = {
   translate,
+  isHomepage: function (options) {
+    return options.data.root.id === "homepage" ? options.fn(this) : "";
+  },
+  getNavLink: (id, options) => {
+    const { language } = options.data.root;
+    if (id === "homepage") {
+      return language === defaultLanguage ? "/" : `/${language}`;
+    }
+    return language === defaultLanguage ? `/${id}` : `/${language}/${id}`;
+  },
   markdown: (content) => marked(content),
   geLangClass: (language, currentLanguage) =>
     language === currentLanguage ? "current" : "",
-  formatDate: (date, language) =>
-    new Date(date).toLocaleDateString(
-      language ? `${language}-${language.toUpperCase()}` : "en-EN",
-      {
-        day: "numeric",
-        month: "short",
-        year: "numeric",
-      }
-    ),
+  formatDate: (date, language = defaultLanguage) =>
+    new Date(date).toLocaleDateString(`${language}-${language.toUpperCase()}`, {
+      day: "numeric",
+      month: "short",
+      year: "numeric",
+    }),
   picture: (id) => {
     const img = json.images[id];
     if (!id) {
@@ -44,19 +45,45 @@ const helpers = {
   },
 };
 
-await render({
-  buildPath: path.join(process.cwd(), "output"),
-  pages: Object.entries(byLanguage).map(([language, sections]) => ({
-    slug: language === "en" ? "index" : language,
+function getLanguageFromSlug(slug = "") {
+  return slug.split("/").at(0);
+}
+
+function removeLanguageFromSlug(slug = "") {
+  return slug.split("/").slice(1).join("/");
+}
+
+function getHomepage(language) {
+  return {
+    id: "homepage",
+    language,
+    template: "index",
+    slug: language === defaultLanguage ? "index" : language,
     title: `${translate("title", language)} - ${translate(
       "subtitle",
       language
     )}`,
-    language,
-    sections,
-    url: process.env.URL || "https://emmacampas.com",
+    url: process.env.URL || productionURL,
     ...json,
-  })),
+  };
+}
+
+await render({
+  buildPath: path.join(process.cwd(), "output"),
+  pages: [
+    ...languages.map(getHomepage),
+    ...pages
+      .map((x) => ({ ...x, language: getLanguageFromSlug(x.slug) }))
+      .map((page) => ({
+        ...page,
+        slug:
+          page.language === defaultLanguage
+            ? removeLanguageFromSlug(page.slug)
+            : page.slug,
+        url: process.env.URL || productionURL,
+        ...json,
+      })),
+  ],
   handlebars: {
     helpers,
   },
