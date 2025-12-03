@@ -95,7 +95,7 @@
           display: flex;
           gap: 3rem;
           time {
-            flex-basis: 10rem;
+            flex-basis: 11rem;
             flex-shrink: 0;
             font-weight: bold;
           }

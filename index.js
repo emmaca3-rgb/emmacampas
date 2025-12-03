@@ -6,8 +6,8 @@ import _ from "lodash";
 const { json, pages } = await load();
 
 const productionURL = "https://emmacampas.com";
-const languages = ["en", "es", "de", "ca"];
-const defaultLanguage = languages.at(0);
+const defaultLanguage = "en";
+const languages = [...new Set(pages.map((x) => getLanguageFromSlug(x.slug)))];
 
 const translate = (key, language) =>
   _.get(json.labels, `${language}.${key}`) || key;
@@ -49,6 +49,10 @@ function getLanguageFromSlug(slug = "") {
   return slug.split("/").at(0);
 }
 
+function removeLanguageFromSlug(slug = "") {
+  return slug.split("/").slice(1).join("/");
+}
+
 function getHomepage(language) {
   return {
     id: "homepage",
@@ -64,30 +68,17 @@ function getHomepage(language) {
   };
 }
 
-function getContactPage(language) {
-  return {
-    id: "contact",
-    language,
-    slug: language === defaultLanguage ? "contact" : `${language}/contact`,
-    title: translate("sections.contact", language),
-    template: "contact",
-    url: process.env.URL || productionURL,
-    ...json,
-  };
-}
-
 await render({
   buildPath: path.join(process.cwd(), "output"),
   pages: [
     ...languages.map(getHomepage),
-    // ...languages.map(getContactPage),
     ...pages
       .map((x) => ({ ...x, language: getLanguageFromSlug(x.slug) }))
       .map((page) => ({
         ...page,
         slug:
           page.language === defaultLanguage
-            ? page.slug.split("/").slice(1).join("/")
+            ? removeLanguageFromSlug(page.slug)
             : page.slug,
         url: process.env.URL || productionURL,
         ...json,

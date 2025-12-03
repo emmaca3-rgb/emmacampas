@@ -80,5 +80,79 @@
         "submit": "Enviar mensaje"
       }
     }
+  },
+  "ca": {
+    "title": "Emma Campàs",
+    "subtitle": "Guitarrista de clàssic i flamenc",
+    "description": "Bienvenido a la pagina de Emma Campàs, guitarrista clasica y flamenca.",
+    "sections": {
+      "homepage": "Inicio",
+      "about": "Sobre ella",
+      "dates": "Conciertos",
+      "awards": "Reconocimientos",
+      "music": "Música",
+      "contact": "Contactos"
+    },
+    "music": {
+      "description": "Aqui tienes una selección de sus actuaciones."
+    },
+    "contact": {
+      "form": {
+        "name": {
+          "label": "Tu nombre",
+          "placeholder": "Como te llamas"
+        },
+        "email": {
+          "label": "Tu E-Mail",
+          "placeholder": "Tu correo electronico"
+        },
+        "subject": {
+          "label": "Asunto",
+          "placeholder": "A ver que quieres"
+        },
+        "message": {
+          "label": "Mensaje",
+          "placeholder": "Corta el rollo"
+        },
+        "submit": "Enviar mensaje"
+      }
+    }
+  },
+  "de": {
+    "title": "Emma Campàs",
+    "subtitle": "Klassik und Flamenco Gitarre",
+    "description": "Willkommen zur Webseite von Emma Campàs, Klassik und Flamenco Gitarristin.",
+    "sections": {
+      "homepage": "Home",
+      "about": "Über Sie",
+      "dates": "Konzerte",
+      "awards": "Auszeichnungen",
+      "music": "Ihre Musik",
+      "contact": "Kontakt"
+    },
+    "music": {
+      "description": "Hier sind einige ihrer Aufführungen."
+    },
+    "contact": {
+      "form": {
+        "name": {
+          "label": "Name",
+          "placeholder": "Deine Name"
+        },
+        "email": {
+          "label": "Deine E-Mail",
+          "placeholder": "Bitte deine E-Mail eingeben"
+        },
+        "subject": {
+          "label": "Betreff",
+          "placeholder": "Worum es geht"
+        },
+        "message": {
+          "label": "Nachricht",
+          "placeholder": "Was ist los"
+        },
+        "submit": "Jetzt Senden"
+      }
+    }
   }
 }
