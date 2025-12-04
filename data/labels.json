@@ -1,5 +1,6 @@
 {
   "common": {
+    "baseTitle": "Emma Campás",
     "languages": {
       "english": "en",
       "german": "de",
@@ -19,9 +20,12 @@
       "music": "Music",
       "contact": "Contact"
     },
-    "music": {
-      "description": "Here you can find a selection of her performances."
-    },
+    "quotes": [
+      {
+        "text": "I listen to Emma Campàs and this is folk fused with a modern feel, a very contemporary feel, it’s another story.",
+        "author": "Cadena Ser"
+      }
+    ],
     "contact": {
       "form": {
         "name": {
@@ -56,9 +60,12 @@
       "music": "Música",
       "contact": "Contactos"
     },
-    "music": {
-      "description": "Aqui tienes una selección de sus actuaciones."
-    },
+    "quotes": [
+      {
+        "text": "Escucho a Emma y flipo que no veas",
+        "author": "Cadena Ser"
+      }
+    ],
     "contact": {
       "form": {
         "name": {
@@ -93,9 +100,6 @@
       "music": "Música",
       "contact": "Contactos"
     },
-    "music": {
-      "description": "Aqui tienes una selección de sus actuaciones."
-    },
     "contact": {
       "form": {
         "name": {
@@ -124,14 +128,11 @@
     "description": "Willkommen zur Webseite von Emma Campàs, Klassik und Flamenco Gitarristin.",
     "sections": {
       "homepage": "Home",
-      "about": "Über Sie",
+      "about": "Über sie",
       "dates": "Konzerte",
       "awards": "Auszeichnungen",
       "music": "Ihre Musik",
       "contact": "Kontakt"
-    },
-    "music": {
-      "description": "Hier sind einige ihrer Aufführungen."
     },
     "contact": {
       "form": {

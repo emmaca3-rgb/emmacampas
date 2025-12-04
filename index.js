@@ -5,18 +5,13 @@ import _ from "lodash";
 
 const { json, pages } = await load();
 
-const productionURL = "https://emmacampas.com";
+const url = process.env.URL || "https://emmacampas.com";
 const defaultLanguage = "en";
 const languages = [...new Set(pages.map((x) => getLanguageFromSlug(x.slug)))];
 
-const translate = (key, language) =>
-  _.get(json.labels, `${language}.${key}`) || key;
-
 const helpers = {
   translate,
-  isHomepage: function (options) {
-    return options.data.root.id === "homepage" ? options.fn(this) : "";
-  },
+  getQuoteKey,
   getNavLink: (id, options) => {
     const { language } = options.data.root;
     if (id === "homepage") {
@@ -39,11 +34,19 @@ const helpers = {
       return;
     }
     return `
-      <img alt="${img.alt}" src="../src/assets/${id}.webp?width=${img.width}" width="${img.width}"/>
+      <img alt="${img.alt}" src="~/src/assets/${id}.webp?width=${img.width}" width="${img.width}"/>
       <figcaption>${img.credit}</figcaption>
     `;
   },
 };
+
+function getQuoteKey(index = 0, key, language) {
+  return translate(`quotes.${index}.${key}`, language);
+}
+
+function translate(key, language) {
+  return _.get(json.labels, `${language}.${key}`) || `${language}.${key}`;
+}
 
 function getLanguageFromSlug(slug = "") {
   return slug.split("/").at(0);
@@ -59,11 +62,10 @@ function getHomepage(language) {
     language,
     template: "index",
     slug: language === defaultLanguage ? "index" : language,
-    title: `${translate("title", language)} - ${translate(
-      "subtitle",
-      language
-    )}`,
-    url: process.env.URL || productionURL,
+    title: translate("subtitle", language),
+    description: translate("description", language),
+    url,
+    isHomepage: true,
     ...json,
   };
 }
@@ -80,7 +82,7 @@ await render({
           page.language === defaultLanguage
             ? removeLanguageFromSlug(page.slug)
             : page.slug,
-        url: process.env.URL || productionURL,
+        url,
         ...json,
       })),
   ],

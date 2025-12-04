@@ -1,6 +1,7 @@
 ---
 id: awards
 title: Awards and Prizes
+image: emma-02
 ---
 
 She was awarded with the 1st Prize at the **IV Vila-seca International Guitar Competition** (2023) and the 1st Prize at the **«Internationalen Jugendwettbewerb für Gitarre Jüchen»** (2021), the 2nd Prize at **«Hanse Guitar Cup»** (2024) and in **«Ciudad de Mula International Guitar Competition»** (2022), the 3rd Prize at the **International Youth Competition «José Tomás Villa de Petrer»** (2023) and the 3rd Prize at **«Ferran Sor» Interational Competition** (2022).

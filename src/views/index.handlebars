@@ -1,4 +1,17 @@
-{{> sections/dates}}
-{{!-- {{> sections/about}}
-{{> sections/awards}}
-{{> sections/music}} --}}
+{{> quote index=0 dark=true}}
+
+<section class="section dates">
+  <div class="container">
+    <div class="content">
+      <h2>{{ translate 'sections.dates' language }}</h2>
+      <ul class="dates-list">
+        {{#each dates}}
+        <li>
+          <time datetime="{{date}}">{{formatDate date @root.language}}</time>
+          <span>{{description}}</span>
+        </li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</section>

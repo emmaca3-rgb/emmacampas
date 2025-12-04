@@ -1,6 +1,7 @@
 ---
 id: awards
 title: Reconocimientos y Premios
+image: emma-02
 ---
 
 Fue galardonada con el 1r Premio en el **IV Concurso Internacional de Guitarra de Vila-seca** (2023) y el 1r Premio en **«Internationalen Jugendwettbewerb für Gitarre Jüchen»** (2021), el 2º Premio en la **«Hanse Guitar Cup»** (2024) y en el **Concurso Internacional de la Ciudad de Mula** (2022), el 3r premio del **Concurso Internacional Joven «José Tomás Villa de Petrer»** (2023) y 3r Premio del **Concurso Internacional «Ferran Sor»** (2022).

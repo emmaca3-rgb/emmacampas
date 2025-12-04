@@ -4,27 +4,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{{title}}</title>
+  <title>{{labels.common.baseTitle}} | {{title}}</title>
   <link rel="stylesheet" href="~/src/style.css" />
 
-  <meta name="description" content="{{ translate 'description' language }}" />
-  <meta property="og:site_name" content="{{title}}" />
-  <meta property="og:url" content="{{url}}" />
-  <meta property="og:title" content="{{title}}" />
-  <meta property="og:image" content="{{url}}/emma-hero.41e467d9.webp" />
-  <meta property="og:description" content="{{ translate 'description' language }}" />
+  {{>meta}}
 
-  {{#isHomepage}}
+  {{#if isHomepage}}
   <link fetchpriority="high" href="~/src/assets/emma-hero.webp" rel="preload" as="image"/>
   <link fetchpriority="high" href="~/src/assets/rosette.svg" rel="preload" as="image"/>
-  {{/isHomepage}}
+  {{/if}}
 </head>
 
 <body class="page-{{id}}">
   {{>nav}}
-  {{#isHomepage}}
+  {{#if isHomepage}}
   {{>hero}}
-  {{/isHomepage}}
+  {{/if}}
   <main>
     {{{body}}}
   </main>
