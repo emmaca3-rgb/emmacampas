@@ -66,17 +66,25 @@ function getHomepage(language) {
     description: translate("description", language),
     url,
     isHomepage: true,
+    sitemap: {
+      priority: 1,
+    },
     ...json,
   };
 }
 
 await render({
   buildPath: path.join(process.cwd(), "output"),
+  domain: url,
   pages: [
     ...languages.map(getHomepage),
     ...pages
       .map((x) => ({ ...x, language: getLanguageFromSlug(x.slug) }))
       .map((page) => ({
+        sitemap: {
+          changefreq: "monthly",
+          priority: 0.8,
+        },
         ...page,
         slug:
           page.language === defaultLanguage
@@ -86,6 +94,9 @@ await render({
         ...json,
       })),
   ],
+  sitemap: {
+    generate: true,
+  },
   handlebars: {
     helpers,
   },

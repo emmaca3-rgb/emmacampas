@@ -4,6 +4,10 @@
   "private": true,
   "version": "0.0.1",
   "type": "module",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "staticFiles": {
+    "staticPath": "./src/static"
+  },
   "author": {
     "name": "Diego Caponera",
     "email": "hello@diegocaponera.com",
@@ -12,7 +16,7 @@
   "scripts": {
     "start": "npx concurrently 'npm run dev:site' 'npm run dev:client'",
     "build": "npm run build:site && npm run build:client",
-    "dev:client": "parcel 'output/**/*.html'",
+    "dev:client": "parcel 'output/**/*.{html,xml}'",
     "dev:site": "npx nodemon -e js,json,md,handlebars --watch data --watch src --watch index.js",
     "build:client": "parcel build output/*.html",
     "build:site": "node index.js",
@@ -23,10 +27,13 @@
     "motion": "^12.23.24"
   },
   "devDependencies": {
+    "@parcel/packager-xml": "^2.16.1",
+    "@parcel/transformer-xml": "^2.16.1",
     "goffre": "^0.0.3",
     "lodash": "^4.17.21",
     "marked": "^17.0.0",
     "parcel": "^2.16.1",
+    "parcel-reporter-static-files-copy": "^1.5.3",
     "sharp": "^0.33.5"
   }
 }
