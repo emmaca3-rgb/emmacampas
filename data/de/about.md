@@ -1,7 +1,6 @@
 ---
 id: about
-title: Biograpfie
-image: emma-01
+title: Biografie
 ---
 
 Als würdige Nachfolgerin der besten Tradition dieses Instruments erkundet sie mit ihrem Gesang, ihrer einzigartigen Verbindung zum Publikum und einem unbestreitbaren technischen Können neue Wege.

@@ -1,7 +1,6 @@
 ---
 id: about
 title: Biografía
-image: emma-01
 ---
 
 Digna sucesora de la mejor tradición de este instrumento, explora nuevos terrenos con su canto, su conexión única con el público y una incuestionable habilidad técnica.

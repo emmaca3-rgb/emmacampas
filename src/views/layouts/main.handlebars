@@ -16,7 +16,7 @@
   {{/if}}
 </head>
 
-<body class="page-{{id}}">
+<body class="page-{{id}} {{#if isHomepage}}page-light{{else}}page-dark{{/if}}">
   {{>nav}}
   {{#if isHomepage}}
   {{>hero}}

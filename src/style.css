@@ -25,6 +25,9 @@
   --serif: "Cormorant Garamond", serif;
   --sans-serif: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+  --filter-light: invert(100%) sepia(0%) saturate(0%) hue-rotate(283deg)
+    brightness(108%) contrast(100%);
 }
 
 * {
@@ -55,16 +58,28 @@ body {
   }
 }
 
-.page-dates {
+.page-dark {
   .nav {
-    background-color: transparent;
-    &.scrolled {
-      background-color: var(--background-color-dark);
-    }
+    color: var(--color-light);
   }
-  main {
-    padding-top: 0;
+}
+
+.page-light {
+  .nav {
+    color: var(--color-dark);
   }
+}
+
+.cover {
+  height: 70vh;
+  background-image: url("~/src/assets/emma-03.jpg?as=webp&width=1800");
+  background-size: max(90vw, 1024px);
+  background-repeat: no-repeat;
+  background-position: center -10vh;
+  background-color: black;
+}
+
+.page-dates {
   .section.dates {
     h1 {
       position: absolute;
@@ -74,12 +89,27 @@ body {
     }
   }
   .cover {
-    height: 70vh;
     background-image: url("~/src/assets/emma-03.jpg?as=webp&width=1800");
     background-size: max(90vw, 1024px);
     background-repeat: no-repeat;
     background-position: center -10vh;
-    background-color: black;
+  }
+}
+
+.page-about {
+  .section.about {
+    h1 {
+      position: absolute;
+      top: calc(70vh * 0.45);
+      right: max(calc(50vw - 512px), 3rem);
+      color: var(--color-light);
+    }
+  }
+  .cover {
+    background-image: url("~/src/assets/emma-04.jpg?as=webp&width=1800");
+    background-size: max(90vw, 1024px);
+    background-repeat: no-repeat;
+    background-position: center -10vh;
   }
 }
 
@@ -103,8 +133,7 @@ body {
           color: var(--color-light);
         }
         .links img {
-          filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(283deg)
-            brightness(108%) contrast(100%);
+          filter: var(--filter-light);
         }
       }
     }
@@ -112,11 +141,6 @@ body {
 }
 
 body {
-  &:not(.page-homepage) {
-    main {
-      padding-top: 3rem;
-    }
-  }
   &.page-dates {
     main {
       padding-top: 0;
@@ -142,8 +166,7 @@ body {
         padding-top: 0;
       }
       .navToggler {
-        filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(283deg)
-          brightness(108%) contrast(100%);
+        filter: var(--filter-light);
       }
     }
     &.page-dates .nav {
@@ -187,8 +210,7 @@ body {
       }
       .navToggler {
         background-image: url("./assets/icons/close.svg");
-        filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(283deg)
-          brightness(108%) contrast(100%);
+        filter: var(--filter-light);
       }
     }
   }

@@ -13,8 +13,7 @@
   padding: 0 2rem;
   letter-spacing: 0.02rem;
   transition: transform 0.2s ease-in-out, background 0.2s ease-in-out;
-  background-color: var(--background-color-dark);
-  color: var(--color-light);
+  background-color: transparent;
 
   &.scrolled {
     background-color: var(--background-color-dark);
@@ -22,8 +21,7 @@
   }
 
   .links img {
-    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(283deg)
-      brightness(108%) contrast(100%);
+    filter: var(--filter-light);
   }
 
   a {
