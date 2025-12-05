@@ -1,7 +1,6 @@
 ---
 id: contact
 title: Contacto
-template: contact
 ---
 
-Puedes escribir aqui, o por [correo electronico](mailto:emmaca3@gmail.com).
+Puedes escribir por [correo electronico](mailto:emmaca3@gmail.com).

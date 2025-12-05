@@ -9,8 +9,6 @@
     padding: 3rem 1rem;
   }
 
-  background-color: var(--background-color);
-
   &.music {
     background-color: var(--background-color-dark);
     color: var(--color-light);

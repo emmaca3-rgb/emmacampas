@@ -49,13 +49,44 @@ body {
   display: none;
 }
 
+.page-homepage {
+  .dates {
+    background-color: var(--background-color);
+  }
+}
+
+@media screen and (min-width: 821px) {
+  .page-homepage {
+    .nav {
+      background-color: transparent;
+      color: var(--color-dark);
+      border-bottom: none;
+      a {
+        color: var(--color-dark);
+      }
+      .links img {
+        filter: none;
+      }
+      &.scrolled {
+        background-color: var(--background-color-dark);
+        color: var(--color-light);
+        border-bottom: 1px solid black;
+        a {
+          color: var(--color-light);
+        }
+        .links img {
+          filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(283deg)
+            brightness(108%) contrast(100%);
+        }
+      }
+    }
+  }
+}
+
 body {
   &:not(.page-homepage) {
     main {
       padding-top: 3rem;
-    }
-    .nav {
-      background-color: white;
     }
   }
   &.loading {
@@ -96,6 +127,7 @@ body {
       background-repeat: no-repeat;
       background-size: calc(var(--nav-toggler-size) * 0.8);
     }
+
     &.loaded {
       .hero {
         .bridge {
@@ -115,6 +147,8 @@ body {
       }
       .navToggler {
         background-image: url("./assets/icons/close.svg");
+        filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(283deg)
+          brightness(108%) contrast(100%);
       }
     }
   }
@@ -122,42 +156,6 @@ body {
 
 a {
   color: var(--color-dark);
-}
-
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  label {
-    font-weight: bold;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    input {
-      line-height: 2.5rem;
-      padding: 0 0.5rem;
-      border-radius: 0.25rem;
-      border: 1px solid var(--background-color-dark);
-    }
-    textarea {
-      padding: 0.5rem;
-      border-radius: 0.25rem;
-      border: 1px solid var(--background-color-dark);
-      font-family: var(--sans-serif);
-    }
-  }
-  button {
-    height: 3rem;
-    appearance: none;
-    border: none;
-    background-color: var(--background-color-dark);
-    color: var(--color-light);
-    transition: opacity 0.2s ease-in-out;
-    border-radius: 0.25rem;
-    &:hover {
-      opacity: 0.8;
-    }
-  }
 }
 
 .footer {

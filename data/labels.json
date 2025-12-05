@@ -14,9 +14,8 @@
     "description": "This is the website of Emma Campàs, classical and flamenco guitarist.",
     "sections": {
       "homepage": "Home",
-      "about": "About",
+      "about": "Bio",
       "dates": "Concerts",
-      "awards": "Awards",
       "music": "Music",
       "contact": "Contact"
     },
@@ -54,9 +53,8 @@
     "description": "Bienvenido a la pagina de Emma Campàs, guitarrista clasica y flamenca.",
     "sections": {
       "homepage": "Inicio",
-      "about": "Sobre ella",
+      "about": "Bio",
       "dates": "Conciertos",
-      "awards": "Reconocimientos",
       "music": "Música",
       "contact": "Contactos"
     },
@@ -94,9 +92,8 @@
     "description": "Bienvenido a la pagina de Emma Campàs, guitarrista clasica y flamenca.",
     "sections": {
       "homepage": "Inicio",
-      "about": "Sobre ella",
+      "about": "Bio",
       "dates": "Conciertos",
-      "awards": "Reconocimientos",
       "music": "Música",
       "contact": "Contactos"
     },
@@ -128,9 +125,8 @@
     "description": "Willkommen zur Webseite von Emma Campàs, Klassik und Flamenco Gitarristin.",
     "sections": {
       "homepage": "Home",
-      "about": "Über sie",
+      "about": "Bio",
       "dates": "Konzerte",
-      "awards": "Auszeichnungen",
       "music": "Ihre Musik",
       "contact": "Kontakt"
     },

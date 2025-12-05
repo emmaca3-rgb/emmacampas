@@ -19,6 +19,8 @@ const helpers = {
     }
     return language === defaultLanguage ? `/${id}` : `/${language}/${id}`;
   },
+  getUrl: (slug, context) =>
+    [context.data.root.url, slug].join("/").replace(/index$/, ""),
   markdown: (content) => marked(content),
   geLangClass: (language, currentLanguage) =>
     language === currentLanguage ? "current" : "",

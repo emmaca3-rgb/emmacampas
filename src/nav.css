@@ -14,12 +14,17 @@
   letter-spacing: 0.02rem;
   transition: transform 0.2s ease-in-out, background 0.2s ease-in-out;
 
-  &.scrolled {
-    background-color: white;
-    border-bottom: 1px solid var(--background-color-dark);
+  background-color: var(--background-color-dark);
+  color: var(--color-light);
+  border-bottom: 1px solid black;
+
+  .links img {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(283deg)
+      brightness(108%) contrast(100%);
   }
 
   a {
+    color: var(--color-light);
     text-decoration: none;
     &:hover {
       text-decoration: underline;
@@ -65,14 +70,9 @@
     height: auto;
     inset: 0;
     gap: 3rem;
-    background-color: var(--background-color);
     flex-direction: column;
     justify-content: center;
     font-size: 1.5rem;
-
-    &.scrolled {
-      background-color: var(--background-color);
-    }
 
     ul:not(.links) {
       flex-direction: column;
