@@ -1,6 +1,6 @@
 ---
 id: contact
-title: Contact Me
+title: Contact
 template: contact
 ---
 
