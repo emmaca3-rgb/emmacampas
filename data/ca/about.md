@@ -1,6 +1,6 @@
 ---
 id: about
-title: Sobre ella
+title: Biografia
 image: emma-01
 ---
 
