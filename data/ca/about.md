@@ -6,7 +6,9 @@ image: emma-01
 
 Digna successora de la millor tradició d’aquest instrument, explora nous terrenys amb el seu cant, la seva connexió única amb el públic i una habilitat tècnica inqüestionable.
 
-Durant la seva formació musical, l’Emma va apostar per un enfocament polièdric que la portaria a interpretar tant l’estil clàssic com el flamenc. El seu repertori és un vetall ampli des del Renaixement fins les creacions contemporànies posant ènfasi en la cultura musical de la península ibèrica.
+El seu enfocament polièdric el porta a interpretar tant l'estil clàssic com el flamenc, totes dues amb una sensibilitat musical reconeguda tant per la crítica com pel públic.
+
+Gràcies a la seva creixent carrera com a solista i als seus nombrosos reconeixements internacionals, es destaca com una de les millors joves guitarristes actuals. Emma Campàs Alàs ha estat convidada a diferents escenaris i institucions internacionals com la Ritterhaus a Hèlsinki, Düsseldorfer Landtag o l'Institut Cervantes a Cracòvia ia Hamburg.
 
 Actualment estudia a la [«Robert Schumann Hochschule für Musik»][1] (Màster-Düsseldorf) i rep orientació artística d’[Alexander Ramírez][2], Eduardo Inestal i [Joaquín Clerch][3].
 
