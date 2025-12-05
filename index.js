@@ -14,14 +14,10 @@ const helpers = {
   getQuoteKey,
   getNavLink: (id, options) => {
     const { language } = options.data.root;
-    let relativeLink = "";
     if (id === "homepage") {
-      relativeLink = language === defaultLanguage ? "/" : `/${language}`;
-    } else {
-      relativeLink =
-        language === defaultLanguage ? `/${id}` : `/${language}/${id}`;
+      return language === defaultLanguage ? "/" : `/${language}`;
     }
-    return path.join(url, relativeLink);
+    return language === defaultLanguage ? `/${id}` : `/${language}/${id}`;
   },
   getUrl: (slug, context) =>
     [context.data.root.url, slug].join("/").replace(/index$/, ""),

@@ -2,33 +2,33 @@
 <nav class="nav">
   <ul class="sections">
     <li>
-      <a href="{{getNavLink 'homepage'}}">{{ translate 'sections.homepage' language }}</a>
+      <a href="{{url}}{{getNavLink 'homepage'}}">{{ translate 'sections.homepage' language }}</a>
     </li>
     <li>
-      <a href="{{getNavLink 'dates'}}">{{ translate 'sections.dates' language }}</a>
+      <a href="{{url}}{{getNavLink 'dates'}}">{{ translate 'sections.dates' language }}</a>
     </li>
     <li>
-      <a href="{{getNavLink 'about'}}">{{ translate 'sections.about' language }}</a>
+      <a href="{{url}}{{getNavLink 'about'}}">{{ translate 'sections.about' language }}</a>
     </li>
     <li>
-      <a href="{{getNavLink 'music'}}">{{ translate 'sections.music' language }}</a>
+      <a href="{{url}}{{getNavLink 'music'}}">{{ translate 'sections.music' language }}</a>
     </li>
     <li>
-      <a href="{{getNavLink 'contact'}}">{{ translate 'sections.contact' language }}</a>
+      <a href="{{url}}{{getNavLink 'contact'}}">{{ translate 'sections.contact' language }}</a>
     </li>
   </ul>
   <ul class="languages">
     <li>
-      <a class="{{geLangClass 'en' language}}" href="/">{{ translate 'languages.english' 'common' }}</a>
+      <a class="{{geLangClass 'en' language}}" href="{{url}}">{{ translate 'languages.english' 'common' }}</a>
     </li>
     <li>
-      <a class="{{geLangClass 'ed' language}}" href="/de">{{ translate 'languages.german' 'common' }}</a>
+      <a class="{{geLangClass 'ed' language}}" href="{{url}}/de">{{ translate 'languages.german' 'common' }}</a>
     </li>
     <li>
-      <a class="{{geLangClass 'es' language}}" href="/es">{{ translate 'languages.spanish' 'common' }}</a>
+      <a class="{{geLangClass 'es' language}}" href="{{url}}/es">{{ translate 'languages.spanish' 'common' }}</a>
     </li>
     <li>
-      <a class="{{geLangClass 'ca' language}}" href="/ca">{{ translate 'languages.catalan' 'common' }}</a>
+      <a class="{{geLangClass 'ca' language}}" href="{{url}}/ca">{{ translate 'languages.catalan' 'common' }}</a>
     </li>
   </ul>
   <ul class="links">
