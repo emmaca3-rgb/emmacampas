@@ -6,7 +6,7 @@ image: emma-01
 
 Digna successora de la millor tradició d’aquest instrument, explora nous terrenys amb el seu cant, la seva connexió única amb el públic i una habilitat tècnica inqüestionable.
 
-El seu enfocament polièdric el porta a interpretar tant l'estil clàssic com el flamenc, totes dues amb una sensibilitat musical reconeguda tant per la crítica com pel públic.
+El seu enfocament polièdric la porta a interpretar tant l'estil clàssic com el flamenc, totes dues amb una sensibilitat musical reconeguda tant per la crítica com pel públic.
 
 Gràcies a la seva creixent carrera com a solista i als seus nombrosos reconeixements internacionals, es destaca com una de les millors joves guitarristes actuals. Emma Campàs Alàs ha estat convidada a diferents escenaris i institucions internacionals com la Ritterhaus a Hèlsinki, Düsseldorfer Landtag o l'Institut Cervantes a Cracòvia ia Hamburg.
 
