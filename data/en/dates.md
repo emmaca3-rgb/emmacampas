@@ -1,6 +1,6 @@
 ---
 id: dates
-title: Concerts
+title: Events
 template: dates
 ---
 
