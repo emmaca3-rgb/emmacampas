@@ -4,4 +4,4 @@ title: Media
 template: music
 ---
 
-Aqui tienes una selección de sus actuaciones.
+Aquí tens una selecció de les seves actuacions.
