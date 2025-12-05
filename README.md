@@ -8,3 +8,7 @@ Website of Emma Campàs.
 - [ ] social media metadata;
 - [ ] picture selection and gallery section;
 - [ ] finishing translations.
+
+## Version
+
+0.1
