@@ -5,6 +5,9 @@ on:
     branches:
       - main
 
+env:
+  URL: https://emmaca3-rgb.github.io/emmacampas
+
 jobs:
   build:
     name: Build Site
