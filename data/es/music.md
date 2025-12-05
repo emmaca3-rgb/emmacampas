@@ -1,6 +1,6 @@
 ---
 id: music
-title: Su Música
+title: Media
 template: music
 ---
 
