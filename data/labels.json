@@ -25,26 +25,8 @@
         "author": "Cadena Ser"
       }
     ],
-    "contact": {
-      "form": {
-        "name": {
-          "label": "Your Name",
-          "placeholder": "Enter your name"
-        },
-        "email": {
-          "label": "Your E-Mail",
-          "placeholder": "Enter your e-mail"
-        },
-        "subject": {
-          "label": "Subject",
-          "placeholder": "E.g. Booking Request"
-        },
-        "message": {
-          "label": "Message",
-          "placeholder": "What you want to write me"
-        },
-        "submit": "Send Message"
-      }
+    "dates": {
+      "upcoming": "Upcoming Concerts"
     }
   },
   "es": {
@@ -58,33 +40,15 @@
       "music": "Música",
       "contact": "Contactos"
     },
+    "dates": {
+      "upcoming": "Próximas Fechas"
+    },
     "quotes": [
       {
         "text": "Escucho a Emma y flipo que no veas",
         "author": "Cadena Ser"
       }
-    ],
-    "contact": {
-      "form": {
-        "name": {
-          "label": "Tu nombre",
-          "placeholder": "Como te llamas"
-        },
-        "email": {
-          "label": "Tu E-Mail",
-          "placeholder": "Tu correo electronico"
-        },
-        "subject": {
-          "label": "Asunto",
-          "placeholder": "A ver que quieres"
-        },
-        "message": {
-          "label": "Mensaje",
-          "placeholder": "Corta el rollo"
-        },
-        "submit": "Enviar mensaje"
-      }
-    }
+    ]
   },
   "ca": {
     "title": "Emma Campàs",
@@ -97,26 +61,8 @@
       "music": "Música",
       "contact": "Contactos"
     },
-    "contact": {
-      "form": {
-        "name": {
-          "label": "Tu nombre",
-          "placeholder": "Como te llamas"
-        },
-        "email": {
-          "label": "Tu E-Mail",
-          "placeholder": "Tu correo electronico"
-        },
-        "subject": {
-          "label": "Asunto",
-          "placeholder": "A ver que quieres"
-        },
-        "message": {
-          "label": "Mensaje",
-          "placeholder": "Corta el rollo"
-        },
-        "submit": "Enviar mensaje"
-      }
+    "dates": {
+      "upcoming": "Proximas Fechas"
     }
   },
   "de": {
@@ -130,26 +76,8 @@
       "music": "Ihre Musik",
       "contact": "Kontakt"
     },
-    "contact": {
-      "form": {
-        "name": {
-          "label": "Name",
-          "placeholder": "Deine Name"
-        },
-        "email": {
-          "label": "Deine E-Mail",
-          "placeholder": "Bitte deine E-Mail eingeben"
-        },
-        "subject": {
-          "label": "Betreff",
-          "placeholder": "Worum es geht"
-        },
-        "message": {
-          "label": "Nachricht",
-          "placeholder": "Was ist los"
-        },
-        "submit": "Jetzt Senden"
-      }
+    "dates": {
+      "upcoming": "Kommende Konzerte"
     }
   }
 }

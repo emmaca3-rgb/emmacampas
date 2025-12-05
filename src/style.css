@@ -55,6 +55,34 @@ body {
   }
 }
 
+.page-dates {
+  .nav {
+    background-color: transparent;
+    &.scrolled {
+      background-color: var(--background-color-dark);
+    }
+  }
+  main {
+    padding-top: 0;
+  }
+  .section.dates {
+    h1 {
+      position: absolute;
+      top: calc(70vh * 0.45);
+      left: max(calc(50vw - 512px), 3rem);
+      color: var(--color-light);
+    }
+  }
+  .cover {
+    height: 70vh;
+    background-image: url("~/src/assets/emma-03.jpg?as=webp&width=1800");
+    background-size: max(90vw, 1024px);
+    background-repeat: no-repeat;
+    background-position: center -10vh;
+    background-color: black;
+  }
+}
+
 @media screen and (min-width: 821px) {
   .page-homepage {
     .nav {
@@ -89,6 +117,11 @@ body {
       padding-top: 3rem;
     }
   }
+  &.page-dates {
+    main {
+      padding-top: 0;
+    }
+  }
   &.loading {
     height: 100vh;
     overflow: hidden;
@@ -108,6 +141,13 @@ body {
       main {
         padding-top: 0;
       }
+      .navToggler {
+        filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(283deg)
+          brightness(108%) contrast(100%);
+      }
+    }
+    &.page-dates .nav {
+      background-color: var(--background-color-dark);
     }
     .navToggler {
       opacity: 0;
