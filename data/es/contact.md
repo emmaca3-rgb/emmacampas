@@ -1,6 +1,6 @@
 ---
 id: contact
-title: Contactos
+title: Contacto
 template: contact
 ---
 
