@@ -4,4 +4,4 @@ title: Events
 template: dates
 ---
 
-Aquí tienes una lista dels propers concerts.
+Aquí tens una llista dels propers concerts.
