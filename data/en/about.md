@@ -1,6 +1,6 @@
 ---
 id: about
-title: About
+title: Biography
 image: emma-01
 ---
 
