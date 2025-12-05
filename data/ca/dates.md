@@ -4,4 +4,4 @@ title: Events
 template: dates
 ---
 
-Aquí tienes una lista de mis actuaciones.
+Aquí tienes una lista dels propers concerts.
