@@ -72,44 +72,61 @@ body {
 
 .cover {
   height: 70vh;
-  background-image: url("~/src/assets/emma-03.jpg?as=webp&width=1800");
+  background-image: url("~/src/assets/emma-03.jpg?as=webp&width=1800&quality=90");
   background-size: max(90vw, 1024px);
   background-repeat: no-repeat;
   background-position: center -10vh;
   background-color: black;
 }
 
-.page-dates {
-  .section.dates {
-    h1 {
-      position: absolute;
-      top: calc(70vh * 0.45);
-      left: max(calc(50vw - 512px), 3rem);
-      color: var(--color-light);
+.section {
+  header {
+    position: absolute;
+    top: calc(70vh * 0.45);
+    color: var(--color-light);
+    p {
+      font-size: 1.5rem !important;
+      font-family: var(--serif) !important;
+      font-style: italic;
+      letter-spacing: 0.03rem;
     }
-  }
-  .cover {
-    background-image: url("~/src/assets/emma-03.jpg?as=webp&width=1800");
-    background-size: max(90vw, 1024px);
-    background-repeat: no-repeat;
-    background-position: center -10vh;
   }
 }
 
 .page-about {
   .section.about {
-    h1 {
-      position: absolute;
-      top: calc(70vh * 0.45);
-      right: max(calc(50vw - 512px), 3rem);
-      color: var(--color-light);
+    header {
+      left: max(calc(50vw - 512px), 3rem);
     }
   }
   .cover {
-    background-image: url("~/src/assets/emma-04.jpg?as=webp&width=1800");
-    background-size: max(90vw, 1024px);
-    background-repeat: no-repeat;
+    background-image: url("~/src/assets/emma-04.jpg?as=webp&width=1800&quality=90");
+    background-position: 25vw -10vh;
+  }
+}
+
+.page-dates {
+  .section.dates {
+    header {
+      left: max(calc(50vw - 512px), 3rem);
+    }
+  }
+  .cover {
+    background-image: url("~/src/assets/emma-03.jpg?as=webp&width=1800&quality=90");
     background-position: center -10vh;
+  }
+}
+
+.page-music {
+  .section.music {
+    header {
+      left: max(calc(50vw - 512px), 3rem);
+    }
+  }
+  .cover {
+    background-image: url("~/src/assets/emma-05.jpg?width=1800&quality=100");
+    background-size: max(100vw, 1024px);
+    background-position: center -20vh;
   }
 }
 

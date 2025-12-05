@@ -1,6 +1,7 @@
 ---
 id: dates
 title: Events
+subtitle: Join Emma in her upcoming music concerts.
 template: dates
 ---
 
