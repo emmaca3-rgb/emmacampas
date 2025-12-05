@@ -1,6 +1,6 @@
 ---
 id: music
-title: Her music
+title: Media
 template: music
 ---
 
