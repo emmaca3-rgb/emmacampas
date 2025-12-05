@@ -4,4 +4,4 @@ title: Contacte
 template: contact
 ---
 
-Pots escriure aquí, o per [correo electronico](mailto:emmaca3@gmail.com).
+Pots escriure aquí, o per [correu electrònic](mailto:emmaca3@gmail.com).
