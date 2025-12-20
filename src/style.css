@@ -17,7 +17,7 @@
 
   --color-dark: rgb(25, 25, 25);
   --color-light: rgb(240, 240, 240);
-  --image-width: 350px;
+  --image-width: 320px;
 
   --navbar-height: 3rem;
   --nav-toggler-size: 4rem;
@@ -89,6 +89,24 @@ body {
       font-family: var(--serif) !important;
       font-style: italic;
       letter-spacing: 0.03rem;
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .section {
+    header {
+      top: 0;
+      left: 1rem !important;
+      line-height: var(--nav-toggler-size);
+      p {
+        display: none;
+      }
+    }
+  }
+  .page-about {
+    .cover {
+      background-position: center 3rem !important;
     }
   }
 }
@@ -289,5 +307,13 @@ a {
 @media screen and (max-width: 820px) {
   .quote p {
     font-size: 2rem;
+  }
+}
+
+[data-animate-in] > * {
+  opacity: 0;
+  translate: 0 50px;
+  &:is(figure) {
+    translate: -50px 50px;
   }
 }

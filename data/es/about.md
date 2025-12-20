@@ -1,7 +1,10 @@
 ---
 id: about
 title: Biografía
+subtitle: Digna sucesora de la mejor tradición.
 ---
+
+<section data-animate-in>
 
 Digna sucesora de la mejor tradición de este instrumento, explora nuevos terrenos con su canto, su conexión única con el público y una incuestionable habilidad técnica.
 
@@ -9,9 +12,14 @@ Su enfoque poliédrico le lleva a interpretar tanto el estilo clásico como el f
 
 Gracias a su creciente carrera como solista y a sus numerosos reconocimientos internacionales, se destaca como una de las mejores jóvenes guitarristas actuales. Emma Campàs Alàs ha sido invitada en diferentes escenarios e instituciones internacionales como la Ritterhaus en Helsinki, Düsseldorfer Landtag o el Instituto Cervantes en Cracovia y en Hamburg.
 
+Actualmente estudia en la [«Robert Schumann Hochschule für Musik»][1] (Máster-Düsseldorf) y recibe orientación artística de [Alexander Ramírez][2], Eduardo Inestal y [Joaquín Clerch][3].
+
+</section>
+<section data-animate-in>
+
 ## Reconocimientos
 
-Actualmente estudia en la [«Robert Schumann Hochschule für Musik»][1] (Máster-Düsseldorf) y recibe orientación artística de [Alexander Ramírez][2], Eduardo Inestal y [Joaquín Clerch][3].
+![Picture](emma-01.webp)
 
 Fue galardonada con el 1r Premio en el **IV Concurso Internacional de Guitarra de Vila-seca** (2023) y el 1r Premio en **«Internationalen Jugendwettbewerb für Gitarre Jüchen»** (2021), el 2º Premio en la **«Hanse Guitar Cup»** (2024) y en el **Concurso Internacional de la Ciudad de Mula** (2022), el 3r premio del **Concurso Internacional Joven «José Tomás Villa de Petrer»** (2023) y 3r Premio del **Concurso Internacional «Ferran Sor»** (2022).
 
@@ -29,6 +37,8 @@ Ha actuado en diferentes escenarios internacionales como:
 - **Palacio de la Música Catalana**
 - **Parlamento de Cataluña**
 - **Ritterhaus** (Helsinki, Finlandia)
+
+</section>
 
 [1]: https://www.rsh-duesseldorf.de/
 [2]: http://www.alexander-sergei-ramirez.com/biographie_sp.htm

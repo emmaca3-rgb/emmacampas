@@ -1,4 +1,4 @@
-import { stagger } from "motion";
+import { stagger, inView } from "motion";
 import { animate } from "motion/mini";
 
 const NAV_SCROLL_THRESHOLD = 150;
@@ -49,6 +49,7 @@ async function animateHero() {
 }
 
 window.addEventListener("DOMContentLoaded", async () => {
+  setupAnimations();
   document
     .querySelector(".navToggler")
     .addEventListener("click", () =>
@@ -93,3 +94,27 @@ function preload(imgSrc) {
 }
 
 const wait = (ms = 100) => new Promise((resolve) => setTimeout(resolve, ms));
+
+function setupAnimations() {
+  inView("[data-animate-in] > *", (element) => {
+    const index = [...element.parentElement.children].indexOf(element);
+    const animation = animate(
+      element,
+      {
+        opacity: 1,
+        translate: 0,
+      },
+      {
+        opacity: {
+          duration: 0.5,
+          delay: 0.1 * Math.min(index + 1, 3),
+        },
+        translate: {
+          duration: 0.5,
+          delay: 0.1 * Math.min(index + 1, 3),
+        },
+      }
+    );
+    return () => animation.stop();
+  });
+}

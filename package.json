@@ -14,7 +14,7 @@
     "url": "https://www.diegocaponera.com"
   },
   "scripts": {
-    "start": "npx concurrently 'npm run dev:site' 'npm run dev:client'",
+    "start": "NODE_ENV=dev npx concurrently 'npm run dev:site' 'npm run dev:client'",
     "build": "npm run build:site && npm run build:client",
     "dev:client": "parcel 'output/**/*.{html,xml}'",
     "dev:site": "npx nodemon -e js,json,md,handlebars --watch data --watch src --watch index.js",

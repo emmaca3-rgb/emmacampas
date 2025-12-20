@@ -5,9 +5,27 @@ import _ from "lodash";
 
 const { json, pages } = await load();
 
-const url = process.env.URL || "https://emmacampas.com";
+const url =
+  process.env.NODE_ENV === "dev"
+    ? "http://localhost:1234"
+    : process.env.URL || "https://emmacampas.com";
 const defaultLanguage = "en";
 const languages = [...new Set(pages.map((x) => getLanguageFromSlug(x.slug)))];
+
+const renderer = {
+  image: (token) => {
+    const img = json.images[path.basename(token, path.extname(token))];
+    if (!img) {
+      return "";
+    }
+    return `<figure class="figure">
+          <img src="~/src/assets/${token}" width="${img.width}" alt="${img.alt}"/>
+          <figcaption>${img.credit}</figcaption>
+        </figure>`;
+  },
+};
+
+marked.use({ renderer });
 
 const helpers = {
   translate,
@@ -81,7 +99,10 @@ await render({
   pages: [
     ...languages.map(getHomepage),
     ...pages
-      .map((x) => ({ ...x, language: getLanguageFromSlug(x.slug) }))
+      .map((x) => ({
+        ...x,
+        language: getLanguageFromSlug(x.slug),
+      }))
       .map((page) => ({
         sitemap: {
           changefreq: "monthly",
@@ -101,5 +122,8 @@ await render({
   },
   handlebars: {
     helpers,
+  },
+  markdown: {
+    renderer,
   },
 });
