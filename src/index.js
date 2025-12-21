@@ -58,10 +58,18 @@ window.addEventListener("DOMContentLoaded", async () => {
     );
 
   const nav = document.querySelector(".nav");
+  const coverImage = document.querySelector(".cover .image");
 
   window.addEventListener("scroll", () => {
     nav.classList.toggle("scrolled", window.scrollY > NAV_SCROLL_THRESHOLD);
     document.body.classList.remove("isNavOpen");
+    if (!coverImage) {
+      return;
+    }
+    document.body.classList.toggle(
+      "isBelowFold",
+      window.scrollY > coverImage.getBoundingClientRect().height
+    );
   });
 
   if (!document.querySelector(".hero")) {

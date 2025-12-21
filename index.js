@@ -23,6 +23,12 @@ const renderer = {
           <figcaption>${img.credit}</figcaption>
         </figure>`;
   },
+  paragraph: (token) => {
+    if (token.startsWith("<figure")) {
+      return token;
+    }
+    return `<p>${token}</p>`;
+  },
 };
 
 marked.use({ renderer });

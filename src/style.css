@@ -219,6 +219,13 @@ body {
         filter: var(--filter-light);
       }
     }
+    &:not(.page-music) {
+      &.isBelowFold {
+        .navToggler {
+          filter: var(--filter-dark);
+        }
+      }
+    }
     &.page-dates .nav {
       background-color: var(--background-color-dark);
     }
@@ -329,6 +336,6 @@ a {
   opacity: 0;
   translate: 0 50px;
   &:is(figure) {
-    translate: -50px 50px;
+    translate: 50px 50px;
   }
 }
