@@ -267,7 +267,7 @@ body {
       }
       .navToggler {
         background-image: url("./assets/icons/close.svg");
-        filter: var(--filter-light);
+        filter: var(--filter-light) !important;
       }
     }
   }
