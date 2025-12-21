@@ -246,6 +246,7 @@ body {
       background-position: center;
       background-repeat: no-repeat;
       background-size: calc(var(--nav-toggler-size) * 0.8);
+      transition: filter 0.3s ease-in-out;
     }
 
     &.loaded {

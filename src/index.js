@@ -51,11 +51,10 @@ async function animateHero() {
 window.addEventListener("DOMContentLoaded", async () => {
   loadCover();
   setupAnimations();
-  document
-    .querySelector(".navToggler")
-    .addEventListener("click", () =>
-      document.body.classList.toggle("isNavOpen")
-    );
+  const navToggler = document.querySelector(".navToggler");
+  navToggler.addEventListener("click", () =>
+    document.body.classList.toggle("isNavOpen")
+  );
 
   const nav = document.querySelector(".nav");
   const coverImage = document.querySelector(".cover .image");
@@ -66,9 +65,12 @@ window.addEventListener("DOMContentLoaded", async () => {
     if (!coverImage) {
       return;
     }
+
     document.body.classList.toggle(
       "isBelowFold",
-      window.scrollY > coverImage.getBoundingClientRect().height
+      window.scrollY >
+        coverImage.getBoundingClientRect().height -
+          navToggler.getBoundingClientRect().height
     );
   });
 
