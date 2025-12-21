@@ -4,7 +4,7 @@
   <div class="container">
     <div class="content">
       <h2>{{ translate 'sections.dates' language }}</h2>
-      <ul class="dates-list">
+      <ul class="dates-list" data-animate-in>
         {{#each dates}}
         <li>
           <time datetime="{{date}}">{{formatDate date @root.language}}</time>

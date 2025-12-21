@@ -3,6 +3,7 @@ id: dates
 title: Events
 subtitle: Join Emma in her upcoming music concerts.
 template: dates
+cover: emma-03.jpg
 ---
 
 Join Emma Campàs Alàs in her upcoming music concerts. Experience the elegance and emotion of Spanish guitar in live performances at prestigious venues and festivals.

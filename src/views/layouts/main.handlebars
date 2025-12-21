@@ -14,6 +14,9 @@
   <link fetchpriority="high" href="~/src/assets/emma-hero.webp" rel="preload" as="image"/>
   <link fetchpriority="high" href="~/src/assets/rosette.svg" rel="preload" as="image"/>
   {{/if}}
+  {{#cover}}
+  <link fetchpriority="high" href="~/src/assets/{{.}}?as=webp&width=1800&quality=90" rel="preload" as="image" data-cover/>
+  {{/cover}}
 </head>
 
 <body class="page-{{id}} {{#if isHomepage}}page-light{{else}}page-dark{{/if}}">

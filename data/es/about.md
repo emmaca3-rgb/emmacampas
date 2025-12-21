@@ -2,6 +2,7 @@
 id: about
 title: Biografía
 subtitle: Digna sucesora de la mejor tradición.
+cover: emma-04.jpg
 ---
 
 <section data-animate-in>

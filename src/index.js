@@ -49,6 +49,7 @@ async function animateHero() {
 }
 
 window.addEventListener("DOMContentLoaded", async () => {
+  loadCover();
   setupAnimations();
   document
     .querySelector(".navToggler")
@@ -117,4 +118,19 @@ function setupAnimations() {
     );
     return () => animation.stop();
   });
+}
+
+async function loadCover() {
+  const coverLink = document.querySelector("link[data-cover]");
+  if (!coverLink) {
+    return;
+  }
+  await preload(coverLink.href);
+  const cover = document.querySelector(".cover");
+
+  cover.querySelector(
+    ".image"
+  ).style.backgroundImage = `url(${coverLink.href})`;
+
+  cover.classList.toggle("loaded");
 }

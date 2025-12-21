@@ -2,6 +2,7 @@
 id: about
 title: About Emma
 subtitle: A worthy successor of the best guitar tradition.
+cover: emma-04.jpg
 ---
 
 <section data-animate-in>
