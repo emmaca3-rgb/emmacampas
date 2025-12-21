@@ -93,6 +93,17 @@ function getHomepage(language) {
   };
 }
 
+function getDescription(page) {
+  if (page.excerpt?.startsWith("<")) {
+    return page.content
+      .split("\n")
+      .filter(Boolean)
+      .filter((x) => !x.startsWith("<"))
+      .at(0);
+  }
+  return page.description || page.excerpt;
+}
+
 await render({
   buildPath: path.join(process.cwd(), "output"),
   domain: url,
@@ -114,6 +125,7 @@ await render({
             ? removeLanguageFromSlug(page.slug)
             : page.slug,
         url,
+        description: getDescription(page),
         ...json,
       })),
   ],
