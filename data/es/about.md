@@ -15,8 +15,6 @@ Gracias a su creciente carrera como solista, se destaca como una de las mejores 
 
 También ha actuado como solista con orquestas como la Orquestra Simfònica del Vallès en Barcelona y la Orquesta del Conservatorio Superior del Liceo. Además, colaboró con el aclamado Orfeó Català en Barcelona.
 
-Actualmente estudia en la [«Robert Schumann Hochschule für Musik»][1] (Máster-Düsseldorf) y recibe orientación artística de [Alexander Ramírez][2], Eduardo Inestal y [Joaquín Clerch][3].
-
 </section>
 <section data-animate-in>
 
@@ -26,9 +24,9 @@ Actualmente estudia en la [«Robert Schumann Hochschule für Musik»][1] (Máste
 
 Ha obtenido numerosos reconocimientos internacionales a lo largo de su carrera, entre los cuales se encuentran: el 1r Premio en el **IV Concurso Internacional de Guitarra de Vila-seca** (2023) y el 1r Premio en **«Internationalen Jugendwettbewerb für Gitarre Jüchen»** (2021), el 2º Premio en la **«Hanse Guitar Cup»** (2024) y en el **Concurso Internacional de la Ciudad de Mula** (2022), el 3r premio del **Concurso Internacional Joven «José Tomás Villa de Petrer»+* (2023) y 3r Premio del **Concurso Internacional «Ferran Sor»** (2022). 
 
-En su formación académica, Emma ha recibido el apoyo de entidades reconocidas como la Fundación Alexander von Humboldt, la fundación Ferrer-Salat, Yeduhi Menuhin Live Music Now y la Studienstiftung des deutschen Volkes. En 2023 se gradúa obteniendo el **«Premio Extraordinario de Interpretación en Música Clásica y Contemporánea**» en el conservatorio Superior de Música del Liceo en Barcelona con el maestro Guillem Pérez-Quer. En el 2026 se gradúa en la Robert Schumann Musikhochschule de Düsseldorf, Alemania recibiendo la orientación artística de Alexander Ramírez, Eduardo Inestal y Joaquín Clerch.
+En su formación académica, Emma ha recibido el apoyo de entidades reconocidas como la Fundación Alexander von Humboldt, la fundación Ferrer-Salat, Yeduhi Menuhin Live Music Now y la Studienstiftung des deutschen Volkes. En 2023 se gradúa obteniendo el **«Premio Extraordinario de Interpretación en Música Clásica y Contemporánea**» en el conservatorio Superior de Música del Liceo en Barcelona con el maestro Guillem Pérez-Quer. En el 2026 se gradúa en la [«Robert Schumann Hochschule für Musik»][1] en Düsseldorf, Alemania recibiendo la orientación artística de [Alexander Ramírez][2], Eduardo Inestal y [Joaquín Clerch][3].
 
-La joven guitarrista Emma Campàs está comprometida con la expansión del repertorio guitarrístico y ha estrenado y divulgado obras de compositores como Maria Camahort, Joaquin Clerch, Ximena Matamoros y Feliu Gasull. Entre sus proyectos actuales se encuentra el álbum MIXTURAS, que reúne a mujeres creadoras para el estreno de nuevas composiciones. Su labor explora nuevas formas de colaboración artística y difusión del repertorio.
+La joven guitarrista Emma Campàs está comprometida con la divulgación de nuevo repertorio para guitarra y ha estrenado e interpretado obras de compositores como Maria Camahort, Joaquin Clerch, Ximena Matamoros y Feliu Gasull. Entre sus proyectos actuales se encuentra el álbum MIXTURAS, que reúne a mujeres creadoras del siglo XXI para el estreno de nuevas composiciones. Su labor explora nuevas formas de colaboración artística y difusión del repertorio.
 
 </section>
 
