@@ -2,6 +2,10 @@
 
 Website of Emma Campàs.
 
+## Preview
+
+https://emmaca3-rgb.github.io/emmacampas/
+
 ## Roadmap
 
 - [ ] homepage content;
