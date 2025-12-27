@@ -1,7 +1,9 @@
 ---
 id: contact
-title: Contactos
+title: Contacto
 cover: emma-05.jpg
 ---
 
-Puedes escribir por [correo electronico](mailto:emmaca3@gmail.com).
+Contacto general por [correo electronico](mailto:emmaca.guitar@gmail.com).
+
+Sigue todas las novedades a través de sus redes sociales.
