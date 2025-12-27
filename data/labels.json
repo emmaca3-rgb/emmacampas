@@ -63,7 +63,13 @@
     },
     "dates": {
       "upcoming": "Proximas Fechas"
-    }
+    },
+    "quotes": [
+      {
+        "text": "Emma Campàs Alàs contribuyó a resaltar momentos de particular intensidad emocional",
+        "author": "El periódico"
+      }
+    ]
   },
   "de": {
     "title": "Emma Campàs",
