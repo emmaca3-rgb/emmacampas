@@ -1,7 +1,8 @@
 ---
 id: contact
 title: Contacto
-cover: emma-05.jpg
+template: contact
+cover: emma-06.jpg
 ---
 
 Contacto general por [correo electronico](mailto:emmaca.guitar@gmail.com).

@@ -16,8 +16,16 @@
       "homepage": "Home",
       "about": "Bio",
       "dates": "Concerts",
-      "music": "Music",
+      "media": "Media",
       "contact": "Contact"
+    },
+    "homepage": {
+      "intro": "Welcome",
+      "links": {
+        "about": "Read more",
+        "dates": "See all concerts",
+        "media": "See all media"
+      }
     },
     "quotes": [
       {
@@ -26,7 +34,8 @@
       }
     ],
     "dates": {
-      "upcoming": "Upcoming Concerts"
+      "upcoming": "Upcoming Concerts",
+      "past": "Past Concerts"
     }
   },
   "es": {
@@ -37,11 +46,20 @@
       "homepage": "Inicio",
       "about": "Bio",
       "dates": "Conciertos",
-      "music": "Música",
+      "media": "Media",
       "contact": "Contacto"
     },
+    "homepage": {
+      "intro": "Bienvenidos",
+      "links": {
+        "about": "Leer mas",
+        "dates": "Ver mas conciertos",
+        "media": "Todos los videos"
+      }
+    },
     "dates": {
-      "upcoming": "Próximas Fechas"
+      "upcoming": "Próximas Fechas",
+      "past": "Fechas pasadas"
     },
     "quotes": [
       {
@@ -58,11 +76,20 @@
       "homepage": "Inicio",
       "about": "Bio",
       "dates": "Conciertos",
-      "music": "Música",
+      "media": "Media",
       "contact": "Contactos"
     },
+    "homepage": {
+      "intro": "Bienvenidos",
+      "links": {
+        "about": "Leer mas",
+        "dates": "Ver mas conciertos",
+        "media": "Todos los videos"
+      }
+    },
     "dates": {
-      "upcoming": "Proximas Fechas"
+      "upcoming": "Proximas Fechas",
+      "past": "Fechas pasadas"
     },
     "quotes": [
       {
@@ -79,11 +106,20 @@
       "homepage": "Home",
       "about": "Bio",
       "dates": "Konzerte",
-      "music": "Ihre Musik",
+      "media": "Media",
       "contact": "Kontakt"
     },
+    "homepage": {
+      "intro": "Willkommen",
+      "links": {
+        "about": "Mehr lesen",
+        "dates": "Mehrere Konzerte",
+        "media": "Mehrere Videos"
+      }
+    },
     "dates": {
-      "upcoming": "Kommende Konzerte"
+      "upcoming": "Kommende Konzerte",
+      "past": "Vergangene Konzerte"
     }
   }
 }

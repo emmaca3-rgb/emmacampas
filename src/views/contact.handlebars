@@ -1,0 +1,31 @@
+<div class="cover">
+  <div class="image"></div>
+</div>
+<section class="section contact">
+  <div class="container">
+    {{#if image }}
+    <figure class="figure">
+      {{{ picture image }}}
+    </figure>
+    {{/if}}
+    <div class="content">
+      <header data-animate-in>
+        <h1>{{title}}</h1>
+        {{#subtitle}}<p>{{.}}</p>{{/subtitle}}
+      </header>
+      {{{content}}}
+      <ul class="social-links">
+        <li>
+          <a href="{{ links.youtube }}" target="_blank">
+            <img alt="Youtube Link" src="~/src/assets/icons/youtube.svg" width="48" height="48" /> Youtube
+          </a>
+        </li>
+        <li>
+          <a href="{{ links.instagram }}" target="_blank">
+            <img alt="Instagram Link" src="~/src/assets/icons/instagram.svg" width="48" height="48" /> Instagram
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>

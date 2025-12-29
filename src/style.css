@@ -120,6 +120,12 @@ body {
       background-position: center 3rem !important;
     }
   }
+
+  .page-contact {
+    .cover .image {
+      background-position: -28vh top !important;
+    }
+  }
 }
 
 .page-about {
@@ -144,8 +150,8 @@ body {
   }
 }
 
-.page-music {
-  .section.music {
+.page-media {
+  .section.media {
     header {
       left: max(calc(50vw - 512px), 3rem);
     }
@@ -159,7 +165,7 @@ body {
 .page-contact {
   .cover .image {
     background-size: max(100vw, 1024px);
-    background-position: center -25vh;
+    background-position: center -5vh;
   }
 }
 
@@ -219,7 +225,7 @@ body {
         filter: var(--filter-light);
       }
     }
-    &:not(.page-music) {
+    &:not(.page-media) {
       &.isBelowFold {
         .navToggler {
           filter: var(--filter-dark);

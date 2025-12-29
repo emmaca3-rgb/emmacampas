@@ -1,6 +1,6 @@
 ---
-id: music
+id: media
 title: Media
 subtitle: Hier sind einige ihrer Aufführungen.
-template: music
+template: media
 ---

@@ -1,0 +1,20 @@
+<div class="cover">
+  <div class="image"></div>
+</div>
+<section class="section media">
+  <div class="container">
+    <div class="content">
+      <header data-animate-in>
+        <h1>{{ title }}</h1>
+        <p>{{ subtitle}} </p>
+      </header>
+      <ul class="videos" data-animate-in>
+        {{#each videos}}
+        <li>
+          {{> video }}
+        </li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</section>

@@ -8,9 +8,12 @@
     padding: 3rem 1rem;
   }
 
-  &.music {
+  &.media {
     background-color: var(--background-color-dark);
     color: var(--color-light);
+    .section-link {
+      color: var(--color-light);
+    }
   }
 
   &.awards ul {
@@ -31,8 +34,36 @@
     margin-bottom: 2rem;
   }
 
+  .section-link {
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-size: 0.9rem;
+    align-self: end;
+    transition: 0.2s ease-in-out;
+    &:hover {
+      opacity: 0.9;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+  }
+
+  .social-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    a {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--sans-serif);
+      font-size: 1rem;
+    }
+  }
+
   &.contact,
-  &.music {
+  &.media {
     .container {
       .content {
         p {
@@ -151,6 +182,14 @@
 }
 
 @media screen and (max-width: 640px) {
+  .section .container .content .section-link {
+    align-self: center;
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+  }
+
   .section .container .content .dates-list li {
     flex-direction: column;
     gap: 0;

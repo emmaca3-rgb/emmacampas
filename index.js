@@ -4,6 +4,9 @@ import { marked } from "marked";
 import _ from "lodash";
 
 const { json, pages } = await load();
+const { pages: homePage } = await load({
+  dataPath: "./homepage",
+});
 
 const url =
   process.env.NODE_ENV === "dev"
@@ -11,6 +14,16 @@ const url =
     : process.env.URL || "https://emmacampas.com";
 const defaultLanguage = "en";
 const languages = [...new Set(pages.map((x) => getLanguageFromSlug(x.slug)))];
+
+const sortedDates = json.dates.toSorted((a, b) =>
+  new Date(a.date) < new Date(b.date) ? 1 : -1
+);
+
+const nextDates = sortedDates
+  .filter((x) => new Date(x.date) > new Date())
+  .slice(0, 5);
+
+const pastDates = sortedDates.filter((x) => new Date(x.date) < new Date());
 
 const renderer = {
   image: (token) => {
@@ -30,8 +43,6 @@ const renderer = {
     return `<p>${token}</p>`;
   },
 };
-
-marked.use({ renderer });
 
 const helpers = {
   translate,
@@ -95,6 +106,9 @@ function getHomepage(language) {
     sitemap: {
       priority: 1,
     },
+    nextDates,
+    video: json.videos.filter((x) => !!x.homepage),
+    about: homePage.find((x) => getLanguageFromSlug(x.slug) === language),
     ...json,
   };
 }
@@ -133,6 +147,9 @@ await render({
         url,
         description: getDescription(page),
         ...json,
+        dates: sortedDates,
+        pastDates,
+        nextDates,
       })),
   ],
   sitemap: {

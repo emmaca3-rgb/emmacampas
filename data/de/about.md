@@ -1,6 +1,8 @@
 ---
 id: about
 title: Biografie
+subtitle: Eine würdige Nachfolgerin der besten Tradition
+cover: emma-04.jpg
 ---
 
 Als würdige Nachfolgerin der besten Tradition dieses Instruments erkundet sie mit ihrem Gesang, ihrer einzigartigen Verbindung zum Publikum und einem unbestreitbaren technischen Können neue Wege.
