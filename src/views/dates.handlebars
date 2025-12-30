@@ -9,11 +9,11 @@
         <p>{{ subtitle}} </p>
       </header>
       {{{content}}}
-      <section>
+      <section data-animate-in>
         <h2>{{ translate 'dates.upcoming' language }}</h2>
         {{> dates dates=nextDates}}
       </section>
-      <section>
+      <section data-animate-in>
         <h2>{{ translate 'dates.past' language }}</h2>
         {{> dates dates=pastDates}}
       </section>

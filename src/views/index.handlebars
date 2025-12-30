@@ -3,7 +3,9 @@
 <section class="section bio">
   <div class="container">
     <div class="content">
+      <div data-animate-in>
       {{{ markdown about.content }}}
+      </div>
       <a href="{{url}}{{getNavLink 'about'}}" class="section-link">{{ translate 'homepage.links.about' language }}</a>
     </div>
   </div>
@@ -12,14 +14,16 @@
 <section class="section media">
   <div class="container">
     <div class="content">
+      <div data-animate-in>
       <h2>{{ translate 'sections.media' language }}</h2>
-      <ul class="videos" data-animate-in>
-        <li>
-        {{#video}}
-          {{> video}}
-        {{/video}}
-      </li>
-      </ul>
+        <ul class="videos">
+          <li>
+          {{#video}}
+            {{> video}}
+          {{/video}}
+        </li>
+        </ul>
+      </div>
       <a href="{{url}}{{getNavLink 'media'}}" class="section-link">{{ translate 'homepage.links.media' language }}</a>
     </div>
   </div>
@@ -28,8 +32,10 @@
 <section class="section dates">
   <div class="container">
     <div class="content">
-      <h2>{{ translate 'sections.dates' language }}</h2>
-      {{> dates dates=nextDates }}
+      <div data-animate-in>
+        <h2>{{ translate 'sections.dates' language }}</h2>
+        {{> dates dates=nextDates }}
+      </div>
       <a href="{{url}}{{getNavLink 'dates'}}" class="section-link">{{ translate 'homepage.links.dates' language }}</a>
     </div>
   </div>
