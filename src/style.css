@@ -74,6 +74,11 @@ body {
   }
 }
 
+.no-scroll {
+  overflow: hidden;
+  height: 100%;
+}
+
 .cover {
   height: 70vh;
   .image {

@@ -159,6 +159,7 @@ function setupLightbox() {
     lightbox.classList.remove("visible", "ready");
     content.innerHTML = "";
     document.removeEventListener("keydown", onKeyDown);
+    document.documentElement.classList.remove("no-scroll");
   }
 
   lightbox.addEventListener("click", (event) => {
@@ -172,6 +173,7 @@ function setupLightbox() {
   document.querySelectorAll("[data-preview]").forEach((el) => {
     el.addEventListener("click", () => {
       document.addEventListener("keydown", onKeyDown);
+      document.documentElement.classList.add("no-scroll");
       lightbox.classList.toggle("visible");
       if (el.dataset.preview === "video") {
         content.innerHTML = `
