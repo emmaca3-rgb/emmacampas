@@ -16,12 +16,12 @@
     <div class="content">
       <div data-animate-in>
       <h2>{{ translate 'sections.media' language }}</h2>
-        <ul class="videos">
-          <li>
+        <ul class="gallery videos">
           {{#video}}
-            {{> video}}
+          <li>
+            {{> video-thumbnail}}
+          </li>
           {{/video}}
-        </li>
         </ul>
       </div>
       <a href="{{url}}{{getNavLink 'media'}}" class="section-link">{{ translate 'homepage.links.media' language }}</a>

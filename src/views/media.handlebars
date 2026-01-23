@@ -8,13 +8,26 @@
         <h1>{{ title }}</h1>
         <p>{{ subtitle}} </p>
       </header>
-      <ul class="videos" data-animate-in>
-        {{#each videos}}
-        <li>
-          {{> video }}
-        </li>
-        {{/each}}
-      </ul>
+      <section>
+        <h2>{{ translate 'media.videos' language }}</h2>
+        <ul class="gallery videos" data-animate-in>
+          {{#each videos}}
+          <li>
+            {{> video-thumbnail }}
+          </li>
+          {{/each}}
+        </ul>
+      </section>
+      <section>
+        <h2>{{ translate 'media.gallery' language }}</h2>
+        <ul class="gallery images" data-animate-in>
+          {{#each gallery}}
+          <li>
+            {{> gallery-thumbnail }}
+          </li>
+          {{/each}}
+        </ul>
+      </section>
     </div>
   </div>
 </section>

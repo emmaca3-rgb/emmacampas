@@ -1,3 +1,4 @@
+{{#if dates.length}}
 <ul class="dates-list">
   {{#each dates}}
   <li>
@@ -6,3 +7,6 @@
   </li>
   {{/each}}
 </ul>
+{{else}}
+<p>{{ translate 'dates.none' language }}</p>
+{{/if}}

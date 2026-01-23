@@ -5,5 +5,11 @@
   "reporters": [
     "...",
     "parcel-reporter-static-files-copy"
-  ]
+  ],
+  "transformers": {
+    "*.html": [
+      "parcel-transformer-html-datasrc",
+      "..."
+    ]
+  }
 }

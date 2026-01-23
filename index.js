@@ -16,7 +16,7 @@ const defaultLanguage = "en";
 const languages = [...new Set(pages.map((x) => getLanguageFromSlug(x.slug)))];
 
 const sortedDates = json.dates.toSorted((a, b) =>
-  new Date(a.date) < new Date(b.date) ? 1 : -1
+  new Date(a.date) < new Date(b.date) ? 1 : -1,
 );
 
 const nextDates = sortedDates
@@ -108,6 +108,7 @@ function getHomepage(language) {
     },
     nextDates,
     video: json.videos.filter((x) => !!x.homepage),
+    gallery: Object.entries(json.images).map(([id, data]) => ({ id, ...data })),
     about: homePage.find((x) => getLanguageFromSlug(x.slug) === language),
     ...json,
   };
@@ -150,6 +151,10 @@ await render({
         dates: sortedDates,
         pastDates,
         nextDates,
+        gallery: Object.entries(json.images).map(([id, data]) => ({
+          id,
+          ...data,
+        })),
       })),
   ],
   sitemap: {

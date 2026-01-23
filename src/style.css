@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap");
 @import url("./hero.css");
 @import url("./nav.css");
+@import url("./lightbox.css");
 @import url("./sections.css");
 
 :root {
@@ -23,11 +24,14 @@
   --nav-toggler-size: 4rem;
 
   --serif: "Cormorant Garamond", serif;
-  --sans-serif: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  --sans-serif:
+    system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 
   --filter-light: invert(100%) sepia(0%) saturate(0%) hue-rotate(283deg)
     brightness(108%) contrast(100%);
+
+  --playback-button-size: 3rem;
 }
 
 * {

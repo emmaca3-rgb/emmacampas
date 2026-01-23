@@ -1,0 +1,69 @@
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 100;
+  opacity: 0;
+  &.visible {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &.ready {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .lightbox-container {
+    position: relative;
+    .lightbox-close {
+      position: absolute;
+      position: absolute;
+      top: 0;
+      right: 0;
+      appearance: none;
+      translate: 50% -50%;
+      border: 0.5px solid rgba(255, 255, 255, 0.3);
+      width: var(--playback-button-size);
+      height: var(--playback-button-size);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2.75rem;
+      border-radius: 50%;
+      background-color: var(--background-color);
+      transition: 0.2s ease-in-out;
+      padding: 0.5rem;
+      box-shadow:
+        rgba(0, 0, 0, 0.16) 0px 3px 6px,
+        rgba(0, 0, 0, 0.23) 0px 3px 6px;
+      &:hover {
+        opacity: 0.9;
+        scale: 1.08;
+        rotate: 90deg;
+      }
+    }
+    .lightbox-content {
+      > iframe {
+        aspect-ratio: 16/9;
+        width: min(90vw, 1024px);
+        box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+      }
+      > img {
+        height: min(90vh, 1024px);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .lightbox .lightbox-container {
+    position: static;
+  }
+  .lightbox .lightbox-container .lightbox-close {
+    right: 1rem;
+    top: 1rem;
+    translate: 0;
+  }
+}

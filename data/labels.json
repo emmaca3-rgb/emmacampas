@@ -35,7 +35,13 @@
     ],
     "dates": {
       "upcoming": "Upcoming Concerts",
-      "past": "Past Concerts"
+      "past": "Past Concerts",
+      "none": "No planned concert."
+    },
+    "media": {
+      "videos": "Videos",
+      "gallery": "Gallery",
+      "preview": "Preview"
     }
   },
   "es": {
@@ -59,7 +65,13 @@
     },
     "dates": {
       "upcoming": "Próximas Fechas",
-      "past": "Fechas pasadas"
+      "past": "Fechas pasadas",
+      "none": "Ningun concierto planeado."
+    },
+    "media": {
+      "videos": "Videos",
+      "gallery": "Galeria",
+      "preview": "Preview"
     },
     "quotes": [
       {
@@ -89,7 +101,13 @@
     },
     "dates": {
       "upcoming": "Proximas Fechas",
-      "past": "Fechas pasadas"
+      "past": "Fechas pasadas",
+      "none": "Ningun concierto planeado."
+    },
+    "media": {
+      "videos": "Videos",
+      "gallery": "Galeria",
+      "preview": "Preview"
     },
     "quotes": [
       {
@@ -119,7 +137,13 @@
     },
     "dates": {
       "upcoming": "Kommende Konzerte",
-      "past": "Vergangene Konzerte"
+      "past": "Vergangene Konzerte",
+      "none": "Keine geplannte Konezerte."
+    },
+    "media": {
+      "videos": "Videos",
+      "gallery": "Bilder",
+      "preview": "Preview"
     }
   }
 }
