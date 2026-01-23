@@ -30,7 +30,6 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      font-size: 2.75rem;
       border-radius: 50%;
       background-color: var(--background-color);
       transition: 0.2s ease-in-out;
@@ -39,9 +38,12 @@
         rgba(0, 0, 0, 0.16) 0px 3px 6px,
         rgba(0, 0, 0, 0.23) 0px 3px 6px;
       &:hover {
-        opacity: 0.9;
         scale: 1.08;
         rotate: 90deg;
+      }
+      img {
+        width: 2rem;
+        height: 2rem;
       }
     }
     .lightbox-content {

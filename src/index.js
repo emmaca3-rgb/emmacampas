@@ -187,7 +187,7 @@ function setupLightbox() {
           <img src="${el.dataset.src}"/>
         `;
       }
-      setTimeout(() => lightbox.classList.toggle("ready"), 300);
+      setTimeout(() => lightbox.classList.toggle("ready"), 500);
     });
   });
 
