@@ -3,6 +3,8 @@ import fs from "node:fs/promises";
 
 let client = null;
 
+console.log(process.env);
+
 function getClient() {
   if (client) {
     return client;
