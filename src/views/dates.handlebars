@@ -4,11 +4,7 @@
 <section class="section dates">
   <div class="container">
     <div class="content">
-      <header data-animate-in>
-        <h1>{{ title }}</h1>
-        <p>{{ subtitle}} </p>
-      </header>
-      {{{content}}}
+      {{>page-content}}
       <section data-animate-in>
         <h2>{{ translate 'dates.upcoming' language }}</h2>
         {{> dates dates=nextDates}}

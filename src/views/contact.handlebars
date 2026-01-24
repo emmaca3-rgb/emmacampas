@@ -3,17 +3,8 @@
 </div>
 <section class="section contact">
   <div class="container">
-    {{#if image }}
-    <figure class="figure">
-      {{{ picture image }}}
-    </figure>
-    {{/if}}
     <div class="content">
-      <header data-animate-in>
-        <h1>{{title}}</h1>
-        {{#subtitle}}<p>{{.}}</p>{{/subtitle}}
-      </header>
-      {{{content}}}
+      {{>page-content}}
       <ul class="social-links">
         <li>
           <a href="{{ links.youtube }}" target="_blank">

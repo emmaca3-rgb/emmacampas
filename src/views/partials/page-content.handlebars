@@ -1,0 +1,18 @@
+<header data-animate-in>
+  <h1>{{title}}</h1>
+  {{#subtitle}}<p>{{.}}</p>{{/subtitle}}
+</header>
+{{#each body}}
+<section data-animate-in>
+  {{#if title}}
+  <h2>{{title}}</h2>
+  {{/if}}
+  {{#if picture}}
+  <figure class="figure">
+    <img src="{{picture.url}}" width="300" alt="{{picture.description}}" />
+    <figcaption>{{picture.attribution}}</figcaption>
+  </figure>
+  {{/if}}
+  {{{ markdown content }}}
+</section>
+{{/each}}

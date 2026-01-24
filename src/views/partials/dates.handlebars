@@ -3,7 +3,7 @@
   {{#each dates}}
   <li>
     <time datetime="{{date}}">{{formatDate date @root.language}}</time>
-    <span>{{description}}</span>
+    <span>{{description}}, {{location}}</span>
   </li>
   {{/each}}
 </ul>

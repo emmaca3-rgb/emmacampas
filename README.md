@@ -8,10 +8,10 @@ https://emmaca3-rgb.github.io/emmacampas/
 
 ## Roadmap
 
-- [ ] homepage content;
-- [ ] social media metadata;
-- [ ] picture selection and gallery section;
-- [ ] finishing translations.
+- finishing translations
+- fix excerpt / meta description
+- add github action deploy hook
+- deploy Sanity studio
 
 ## Version
 

@@ -27,12 +27,6 @@
         "media": "See all media"
       }
     },
-    "quotes": [
-      {
-        "text": "I listen to Emma Campàs and this is folk fused with a modern feel, a very contemporary feel, it’s another story.",
-        "author": "Cadena Ser"
-      }
-    ],
     "dates": {
       "upcoming": "Upcoming Concerts",
       "past": "Past Concerts",
@@ -72,13 +66,7 @@
       "videos": "Videos",
       "gallery": "Galeria",
       "preview": "Preview"
-    },
-    "quotes": [
-      {
-        "text": "De Emma he escuchado una cosa que me conquistó en el primer momento ... es un folk fusionado con un aire moderno, un aire contemporáneo, es otra historia",
-        "author": "Cadena Ser"
-      }
-    ]
+    }
   },
   "ca": {
     "title": "Emma Campàs",
@@ -108,13 +96,7 @@
       "videos": "Videos",
       "gallery": "Galeria",
       "preview": "Preview"
-    },
-    "quotes": [
-      {
-        "text": "Emma Campàs Alàs contribuyó a resaltar momentos de particular intensidad emocional",
-        "author": "El periódico"
-      }
-    ]
+    }
   },
   "de": {
     "title": "Emma Campàs",

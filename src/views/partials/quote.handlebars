@@ -1,6 +1,6 @@
 <blockquote class="quote{{#if dark }} dark{{/if}}">
   <p data-animate-in>
-    <span class="text">{{ getQuoteKey index 'text' language }}</span>
-    <span class="author">{{ getQuoteKey index 'author' language }}</span>
+    <span class="text">{{ translateSanity quote.text @root.language }}</span>
+    <span class="author">{{ quote.source }}</span>
   </p>
 </blockquote>

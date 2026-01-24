@@ -1,9 +1,9 @@
 <figure>
   <div class="media-cover-wrapper">
-    <img src="~/src/assets/{{id}}.jpg?as=webp&width=300&quality=90" width="300"alt="{{alt}}"/>
-    <button class="preview-button" aria-label="{{ translate 'media.preview' language }}" data-preview="image" data-src="~/src/assets/{{id}}.jpg?as=webp&quality=100">
+    <img src="{{url}}?w=300&q=100" width="300"alt="{{caption}}"/>
+    <button class="preview-button" aria-label="{{ translate 'media.preview' language }}" data-preview="image" data-src="{{url}}">
       <img alt="Preview" src="~/src/assets/icons/preview.svg" width="36" height="36" />
     </button>
   </div>
-  <figcaption>{{description}}</figcaption>
+  <figcaption>{{attribution}}</figcaption>
 </figure>

@@ -1,21 +1,20 @@
 import path from "node:path";
-import { load, render } from "goffre";
+import { render } from "goffre";
 import { marked } from "marked";
 import _ from "lodash";
+import { getData, translate as translateSanity } from "./sanity.js";
+import labels from "./labels.json" with { type: "json" };
 
-const { json, pages } = await load();
-const { pages: homePage } = await load({
-  dataPath: "./homepage",
-});
+const data = await getData({ cached: true });
 
 const url =
   process.env.NODE_ENV === "dev"
     ? "http://localhost:1234"
     : process.env.URL || "https://emmacampas.com";
 const defaultLanguage = "en";
-const languages = [...new Set(pages.map((x) => getLanguageFromSlug(x.slug)))];
+const languages = [...new Set(data.pages.map((x) => x.language))];
 
-const sortedDates = json.dates.toSorted((a, b) =>
+const sortedDates = data.events.toSorted((a, b) =>
   new Date(a.date) < new Date(b.date) ? 1 : -1,
 );
 
@@ -26,16 +25,6 @@ const nextDates = sortedDates
 const pastDates = sortedDates.filter((x) => new Date(x.date) < new Date());
 
 const renderer = {
-  image: (token) => {
-    const img = json.images[path.basename(token, path.extname(token))];
-    if (!img) {
-      return "";
-    }
-    return `<figure class="figure">
-          <img src="~/src/assets/${token}" width="${img.width}" alt="${img.alt}"/>
-          <figcaption>${img.credit}</figcaption>
-        </figure>`;
-  },
   paragraph: (token) => {
     if (token.startsWith("<figure")) {
       return token;
@@ -44,9 +33,11 @@ const renderer = {
   },
 };
 
+marked.use(renderer);
+
 const helpers = {
   translate,
-  getQuoteKey,
+  translateSanity,
   getNavLink: (id, options) => {
     const { language } = options.data.root;
     if (id === "homepage") {
@@ -65,32 +56,17 @@ const helpers = {
       month: "short",
       year: "numeric",
     }),
-  picture: (id) => {
-    const img = json.images[id];
-    if (!id) {
-      return;
-    }
-    return `
-      <img alt="${img.alt}" src="~/src/assets/${id}.webp?width=${img.width}" width="${img.width}"/>
-      <figcaption>${img.credit}</figcaption>
-    `;
-  },
 };
 
-function getQuoteKey(index = 0, key, language) {
-  return translate(`quotes.${index}.${key}`, language);
-}
-
 function translate(key, language) {
-  return _.get(json.labels, `${language}.${key}`) || `${language}.${key}`;
+  return _.get(labels, `${language}.${key}`) || `${language}.${key}`;
 }
 
-function getLanguageFromSlug(slug = "") {
-  return slug.split("/").at(0);
-}
-
-function removeLanguageFromSlug(slug = "") {
-  return slug.split("/").slice(1).join("/");
+function getTemplate(page) {
+  if (page.id === "about") {
+    return null;
+  }
+  return page.id;
 }
 
 function getHomepage(language) {
@@ -107,22 +83,16 @@ function getHomepage(language) {
       priority: 1,
     },
     nextDates,
-    video: json.videos.filter((x) => !!x.homepage),
-    gallery: Object.entries(json.images).map(([id, data]) => ({ id, ...data })),
-    about: homePage.find((x) => getLanguageFromSlug(x.slug) === language),
-    ...json,
+    labels,
+    ...data.homepage,
   };
 }
 
-function getDescription(page) {
-  if (page.excerpt?.startsWith("<")) {
-    return page.content
-      .split("\n")
-      .filter(Boolean)
-      .filter((x) => !x.startsWith("<"))
-      .at(0);
+function getPageSlug(page) {
+  if (page.language === defaultLanguage) {
+    return page.id;
   }
-  return page.description || page.excerpt;
+  return page.slug || `${page.language}/${page.id}`;
 }
 
 await render({
@@ -130,32 +100,24 @@ await render({
   domain: url,
   pages: [
     ...languages.map(getHomepage),
-    ...pages
-      .map((x) => ({
-        ...x,
-        language: getLanguageFromSlug(x.slug),
-      }))
-      .map((page) => ({
+    ...data.pages.map((page) => {
+      return {
         sitemap: {
           changefreq: "monthly",
           priority: 0.8,
         },
         ...page,
-        slug:
-          page.language === defaultLanguage
-            ? removeLanguageFromSlug(page.slug)
-            : page.slug,
         url,
-        description: getDescription(page),
-        ...json,
+        template: getTemplate(page),
+        slug: getPageSlug(page),
+        labels,
         dates: sortedDates,
         pastDates,
         nextDates,
-        gallery: Object.entries(json.images).map(([id, data]) => ({
-          id,
-          ...data,
-        })),
-      })),
+        gallery: data.gallery,
+        links: data.homepage.links,
+      };
+    }),
   ],
   sitemap: {
     generate: true,

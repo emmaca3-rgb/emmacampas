@@ -11,7 +11,7 @@
       <section>
         <h2>{{ translate 'media.videos' language }}</h2>
         <ul class="gallery videos" data-animate-in>
-          {{#each videos}}
+          {{#each gallery.videos}}
           <li>
             {{> video-thumbnail }}
           </li>
@@ -21,7 +21,7 @@
       <section>
         <h2>{{ translate 'media.gallery' language }}</h2>
         <ul class="gallery images" data-animate-in>
-          {{#each gallery}}
+          {{#each gallery.pictures}}
           <li>
             {{> gallery-thumbnail }}
           </li>
