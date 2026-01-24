@@ -156,10 +156,20 @@ function setupLightbox() {
   }
 
   function closeLightbox() {
-    lightbox.classList.remove("visible", "ready");
-    content.innerHTML = "";
-    document.removeEventListener("keydown", onKeyDown);
-    document.documentElement.classList.remove("no-scroll");
+    lightbox.classList.remove("ready");
+    lightbox.addEventListener(
+      "transitionend",
+      (event) => {
+        if (!event.target.classList.contains("lightbox")) {
+          return;
+        }
+        lightbox.classList.remove("visible");
+        content.innerHTML = "";
+        document.removeEventListener("keydown", onKeyDown);
+        document.documentElement.classList.remove("no-scroll");
+      },
+      { once: true },
+    );
   }
 
   lightbox.addEventListener("click", (event) => {
