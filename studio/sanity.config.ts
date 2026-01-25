@@ -6,6 +6,7 @@ import {markdownSchema} from 'sanity-plugin-markdown'
 import {singletonTools} from 'sanity-plugin-singleton-management'
 import {structure} from './structure'
 import config from '../sanity.json' with {type: 'json'}
+import './styles.css'
 
 export default defineConfig({
   name: 'default',

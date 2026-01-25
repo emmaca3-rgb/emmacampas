@@ -33,7 +33,7 @@ export const homepageType = defineType({
           ],
         }),
       ],
-      options: {disableActions: ['duplicate']},
+      options: {disableActions: ['duplicate'], layout: 'list'},
       validation: (rule) => rule.unique(),
       group: 'settings',
     }),
@@ -60,6 +60,9 @@ export const homepageType = defineType({
       name: 'videos',
       type: 'array',
       of: [defineArrayMember({type: 'reference', to: [{type: 'video'}]})],
+      options: {
+        layout: 'grid',
+      },
     }),
   ],
   preview: {

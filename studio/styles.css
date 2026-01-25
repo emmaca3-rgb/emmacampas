@@ -1,0 +1,4 @@
+#videos [data-ui='Grid'],
+#pictures [data-ui='Grid'] {
+  grid-template-columns: repeat(3, minmax(0px, 1fr));
+}

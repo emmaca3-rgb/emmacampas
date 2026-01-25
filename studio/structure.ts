@@ -9,7 +9,7 @@ export const structure = (S: StructureBuilder, context) => {
       S.listItem()
         .title('Homepage')
         .child(S.document().schemaType('homepage').documentId('homepage')),
-      S.listItem().title('Gallery').child(S.document().schemaType('gallery').documentId('gallery')),
+      S.listItem().title('Media').child(S.document().schemaType('gallery').documentId('gallery')),
       ...filteredDocumentListItems({S, context}),
     ])
 }

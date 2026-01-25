@@ -1,5 +1,6 @@
 import {defineField, defineType} from 'sanity'
 import {baseLanguage} from './localeStringType'
+import VideoPreview from '../components/VideoPreview'
 
 export const videoType = defineType({
   name: 'video',
@@ -20,10 +21,12 @@ export const videoType = defineType({
   preview: {
     select: {
       title: 'title',
+      link: 'link',
     },
-    prepare({title}) {
+    prepare({title, link}) {
       return {
         title: title[baseLanguage?.value as string],
+        media: <VideoPreview link={link} title={title[baseLanguage?.value as string]} />,
       }
     },
   },

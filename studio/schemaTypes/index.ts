@@ -1,6 +1,6 @@
 import {pageType} from './pageType'
 import {eventType} from './eventType'
-import {videoType} from './videoType'
+import {videoType} from './videoType.tsx'
 import {photoType} from './photoType'
 import {quoteType} from './quoteType'
 import {textBlockType} from './textBlockType'

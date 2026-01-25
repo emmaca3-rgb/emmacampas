@@ -2,7 +2,7 @@ import {defineType, defineField, defineArrayMember} from 'sanity'
 
 export const galleryType = defineType({
   name: 'gallery',
-  title: 'Gallery',
+  title: 'Media',
   type: 'document',
   options: {
     singleton: true,
@@ -13,7 +13,10 @@ export const galleryType = defineType({
       name: 'videos',
       type: 'array',
       of: [defineArrayMember({type: 'reference', to: [{type: 'video'}]})],
-      options: {disableActions: ['duplicate']},
+      options: {
+        disableActions: ['duplicate'],
+        layout: 'grid',
+      },
       validation: (rule) => rule.unique(),
     }),
     defineField({
@@ -21,13 +24,13 @@ export const galleryType = defineType({
       name: 'pictures',
       type: 'array',
       of: [defineArrayMember({type: 'reference', to: [{type: 'photo'}]})],
-      options: {disableActions: ['duplicate']},
+      options: {disableActions: ['duplicate'], layout: 'grid'},
       validation: (rule) => rule.unique(),
     }),
   ],
   preview: {
     prepare() {
-      return {title: 'Gallery'}
+      return {title: 'Media'}
     },
   },
 })

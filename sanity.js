@@ -100,7 +100,7 @@ export async function getGallery() {
   };
 }
 
-function getVideoID(link) {
+export function getVideoID(link) {
   const url = new URL(link);
   const params = new URLSearchParams(url.search);
   return params.get("v");
