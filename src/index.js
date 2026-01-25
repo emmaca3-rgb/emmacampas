@@ -160,7 +160,7 @@ function setupLightbox() {
     lightbox.addEventListener(
       "transitionend",
       (event) => {
-        if (!event.target.classList.contains("lightbox")) {
+        if (typeof event.target.dataset.lightboxClose === "undefined") {
           return;
         }
         lightbox.classList.remove("visible");
@@ -185,6 +185,7 @@ function setupLightbox() {
       document.addEventListener("keydown", onKeyDown);
       document.documentElement.classList.add("no-scroll");
       lightbox.classList.toggle("visible");
+
       if (el.dataset.preview === "video") {
         content.innerHTML = `
           <iframe
@@ -194,12 +195,18 @@ function setupLightbox() {
             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
           </iframe>
         `;
-      } else if (el.dataset.preview === "image") {
+        setTimeout(() => lightbox.classList.toggle("ready"), 500);
+        return;
+      }
+
+      const img = new Image();
+      img.src = el.dataset.src;
+      img.onload = () => {
         content.innerHTML = `
           <img src="${el.dataset.src}"/>
         `;
-      }
-      setTimeout(() => lightbox.classList.toggle("ready"), 500);
+        lightbox.classList.toggle("ready");
+      };
     });
   });
 
