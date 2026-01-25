@@ -1,6 +1,6 @@
 import { createClient } from "@sanity/client";
 import fs from "node:fs/promises";
-import config from "./sanity.json";
+import config from "./sanity.json" with { type: "json" };
 
 let client = null;
 
