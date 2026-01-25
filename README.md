@@ -13,10 +13,9 @@ https://emmaca3-rgb.github.io/emmacampas/
 ## Roadmap
 
 - finishing translations
-- fix excerpt / meta description
-- add github action deploy hook
-- deploy Sanity studio
+- fix meta tags
+- improve lightbox
 
 ## Version
 
-0.1.1
+0.2.0
