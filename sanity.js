@@ -45,6 +45,7 @@ export async function getPages() {
       title,
       subtitle,
       language,
+      description,
       body[]{
         content,
         title,
@@ -64,6 +65,7 @@ export async function getHomepage() {
   const data = await getClient().fetch(
     `*[_type=="homepage"] {
       intro,
+      "socialMediaCover" : socialMediaCover.asset->url,
       quote -> { text, source, link },
       videos[]->{title, link},
       socialLinks

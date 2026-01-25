@@ -6,7 +6,7 @@
   .image {
     position: absolute;
     inset: 0;
-    background-image: url("./assets/emma-hero.webp");
+    background-image: url("~/src/assets/emma-hero.webp");
     background-position: -300px 0;
     background-size: cover;
     background-repeat: no-repeat;
@@ -82,7 +82,9 @@
     font-style: normal;
     font-weight: normal;
     line-height: 1;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    box-shadow:
+      rgba(0, 0, 0, 0.16) 0px 3px 6px,
+      rgba(0, 0, 0, 0.23) 0px 3px 6px;
 
     .name {
       font-weight: 500;

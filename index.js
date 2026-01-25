@@ -116,6 +116,7 @@ await render({
         nextDates,
         gallery: data.gallery,
         links: data.homepage.links,
+        socialMediaCover: data.homepage.socialMediaCover,
       };
     }),
   ],

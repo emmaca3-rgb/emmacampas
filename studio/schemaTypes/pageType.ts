@@ -6,12 +6,23 @@ export const pageType = defineType({
   name: 'page',
   title: 'Page',
   type: 'document',
+  groups: [
+    {
+      name: 'head',
+      title: 'Head',
+    },
+    {
+      name: 'settings',
+      title: 'Settings',
+    },
+  ],
   fields: [
     defineField({
       title: 'Page ID',
       name: 'id',
       type: 'string',
       validation: (rule) => rule.required(),
+      group: 'settings',
     }),
     defineField({
       name: 'language',
@@ -21,23 +32,34 @@ export const pageType = defineType({
       options: {
         list: supportedLanguages,
       },
+      group: 'settings',
     }),
     defineField({
       title: 'Page Title',
       name: 'title',
       type: 'string',
       validation: (rule) => rule.required(),
+      group: 'head',
+    }),
+    defineField({
+      title: 'Page Description',
+      description: 'Needed for search engine and social media platforms',
+      name: 'description',
+      type: 'text',
+      group: 'head',
     }),
     defineField({
       title: 'Page Subtitle',
       name: 'subtitle',
       type: 'string',
+      group: 'head',
     }),
     defineField({
       title: 'Cover',
       name: 'cover',
       type: 'reference',
       to: [{type: 'photo'}],
+      group: 'head',
     }),
     defineField({
       title: 'Page Content',

@@ -7,6 +7,7 @@ export const homepageType = defineType({
   options: {
     singleton: true,
   },
+  groups: [{name: 'settings', title: 'General Settings'}],
   fields: [
     defineField({
       title: 'Social Media',
@@ -34,6 +35,13 @@ export const homepageType = defineType({
       ],
       options: {disableActions: ['duplicate']},
       validation: (rule) => rule.unique(),
+      group: 'settings',
+    }),
+    defineField({
+      title: 'Social Media Cover',
+      name: 'socialMediaCover',
+      type: 'image',
+      group: 'settings',
     }),
     defineField({
       title: 'Quote',

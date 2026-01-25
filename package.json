@@ -20,7 +20,7 @@
     "dev:site": "npx nodemon -e js,json,md,handlebars --watch data --watch src --watch index.js",
     "build:client": "parcel build 'output/**/*.{html,xml}' --public-url $URL",
     "build:site": "node index.js",
-    "clean": "rm -rf dist output",
+    "clean": "rm -rf dist output sanity-dump.json",
     "rosette": "npx nodemon rosette.js"
   },
   "dependencies": {
