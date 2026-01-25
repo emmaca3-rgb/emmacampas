@@ -1,5 +1,6 @@
 import { createClient } from "@sanity/client";
 import fs from "node:fs/promises";
+import config from "./sanity.json";
 
 let client = null;
 
@@ -9,8 +10,7 @@ function getClient() {
   }
   client = client = createClient({
     useCdn: false,
-    projectId: process.env.SANITY_PROJECT_ID,
-    dataset: "production",
+    ...config,
     apiVersion: new Date().toISOString().split("T").at(0),
   });
   return client;

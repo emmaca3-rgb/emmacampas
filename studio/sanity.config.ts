@@ -5,13 +5,12 @@ import {schemaTypes} from './schemaTypes'
 import {markdownSchema} from 'sanity-plugin-markdown'
 import {singletonTools} from 'sanity-plugin-singleton-management'
 import {structure} from './structure'
-
-const {SANITY_STUDIO_PROJECT_ID} = process.env
+import config from '../sanity.json' with {type: 'json'}
 
 export default defineConfig({
   name: 'default',
   title: 'Emma Campas',
-  projectId: SANITY_STUDIO_PROJECT_ID as string,
+  projectId: config.projectId,
   dataset: 'production',
   plugins: [structureTool({structure}), visionTool(), markdownSchema(), singletonTools()],
   schema: {

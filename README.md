@@ -8,7 +8,7 @@ https://emmaca3-rgb.github.io/emmacampas/
 
 ## Content Editor
 
-[Sanity Studio](https://www.sanity.io/@oIxHuJCxJ/studio/nvyq059eprdy0mtbmp9njfpf/default)
+[Sanity Studio](https://emmacampas.sanity.studio/)
 
 ## Roadmap
 

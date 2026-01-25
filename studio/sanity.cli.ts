@@ -1,14 +1,10 @@
 import {defineCliConfig} from 'sanity/cli'
-
-const {SANITY_STUDIO_PROJECT_ID, SANITY_STUDIO_APP_ID} = process.env
+import config from '../sanity.json' with {type: 'json'}
 
 export default defineCliConfig({
-  api: {
-    projectId: SANITY_STUDIO_PROJECT_ID,
-    dataset: 'production',
-  },
+  api: config,
   deployment: {
-    appId: SANITY_STUDIO_APP_ID,
+    ...config,
     autoUpdates: true,
   },
 })
