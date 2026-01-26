@@ -87,7 +87,12 @@ export async function getHomepage() {
 export async function getGallery() {
   const data = await getClient().fetch(
     `*[_type=="gallery"] {
-      pictures[]->{caption, attribution, "url": image.asset->url},
+      pictures[]->{
+        caption,
+        attribution,
+        "url": image.asset->url,
+        "dimensions": image.asset-> metadata.dimensions
+      },
       videos[]->{title, link},
     }`,
   );

@@ -53,6 +53,10 @@
       }
       > img {
         height: min(90vh, 1024px);
+        &[data-is-landscape="true"] {
+          height: auto;
+          width: min(90vw, 1024px);
+        }
       }
     }
   }
@@ -66,5 +70,13 @@
     right: 1rem;
     top: 1rem;
     translate: 0;
+  }
+  .lightbox .lightbox-container .lightbox-content > img {
+    height: 100vh;
+    width: auto;
+    &[data-is-landscape="true"] {
+      width: 100vw;
+      height: auto;
+    }
   }
 }

@@ -203,7 +203,7 @@ function setupLightbox() {
       img.src = el.dataset.src;
       img.onload = () => {
         content.innerHTML = `
-          <img src="${el.dataset.src}"/>
+          <img src="${el.dataset.src}" data-is-landscape="${el.dataset.isLandscape}"/>
         `;
         lightbox.classList.toggle("ready");
       };

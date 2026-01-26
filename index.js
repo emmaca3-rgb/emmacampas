@@ -45,6 +45,7 @@ const helpers = {
     }
     return language === defaultLanguage ? `/${id}` : `/${language}/${id}`;
   },
+  isLandscape: (ratio) => ratio > 1,
   getUrl: (slug, context) =>
     [context.data.root.url, slug].join("/").replace(/index$/, ""),
   markdown: (content) => marked(content),
