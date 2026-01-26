@@ -1,14 +1,12 @@
 <figure>
   <div class="media-cover-wrapper">
-    <img src="{{url}}?w=300&q=100&auto=format" width="300"alt="{{caption}}"/>
-    <button
-      class="preview-button"
-      aria-label="{{ translate 'media.preview' language }}"
+    <img
+      src="{{url}}?w=300&q=100&auto=format"
+      alt="Preview of {{description}}"
       data-preview="image"
       data-is-landscape="{{ isLandscape dimensions.aspectRatio }}"
-      data-src="{{url}}?auto=format">
-      <img alt="Preview" src="~/src/assets/icons/preview.svg" width="36" height="36" />
-    </button>
+      data-src="{{url}}?auto=format"/>
+    <img class="preview-icon" alt="Preview" src="~/src/assets/icons/preview.svg" width="36" height="36" />
   </div>
-  <figcaption>{{attribution}}</figcaption>
+  <figcaption>&copy; {{attribution}}</figcaption>
 </figure>

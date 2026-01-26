@@ -160,6 +160,7 @@
         }
 
         figure {
+          cursor: pointer;
           display: flex;
           flex-direction: column;
           gap: 0.5rem;
@@ -168,21 +169,22 @@
             overflow: hidden;
 
             &:hover {
-              .preview-button {
-                translate: -50% -50%;
+              .preview-icon {
+                scale: 1;
               }
-              > img {
+              > img:not(.preview-icon) {
                 opacity: 0.4;
                 transition: 0.2s ease-in-out;
               }
             }
 
-            .preview-button {
+            .preview-icon {
+              z-index: 100;
               position: absolute;
               top: 50%;
               left: 50%;
               appearance: none;
-              translate: -50% -350px;
+              translate: -50% -50%;
               border: 0.5px solid rgba(255, 255, 255, 0.3);
               width: var(--playback-button-size);
               height: var(--playback-button-size);
@@ -193,14 +195,12 @@
               border-radius: 50%;
               background-color: var(--background-color);
               transition: 0.2s ease-in-out;
+              scale: 0;
               padding: 0.5rem;
+              pointer-events: none;
               box-shadow:
                 rgba(0, 0, 0, 0.16) 0px 3px 6px,
                 rgba(0, 0, 0, 0.23) 0px 3px 6px;
-              &:hover {
-                opacity: 0.9;
-                scale: 1.08;
-              }
             }
 
             > img {

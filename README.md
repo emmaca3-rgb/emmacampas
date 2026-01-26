@@ -14,7 +14,6 @@ https://emmaca3-rgb.github.io/emmacampas/
 
 - finishing translations
 - fix meta tags
-- improve lightbox
 
 ## Version
 
