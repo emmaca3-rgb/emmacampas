@@ -58,7 +58,9 @@ export async function getPages() {
 }
 
 export async function getEvents() {
-  return getClient().fetch('*[_type=="event"] { date, description, location }');
+  return getClient().fetch(
+    '*[_type=="event"] { date, description, location, link }',
+  );
 }
 
 export async function getHomepage() {

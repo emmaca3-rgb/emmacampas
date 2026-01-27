@@ -20,6 +20,11 @@ export const eventType = defineType({
       name: 'date',
       type: 'datetime',
     }),
+    defineField({
+      title: 'Event Link',
+      name: 'link',
+      type: 'url',
+    }),
   ],
   preview: {
     select: {

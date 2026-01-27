@@ -3,7 +3,11 @@
   {{#each dates}}
   <li>
     <time datetime="{{date}}">{{formatDate date @root.language}}</time>
+    {{#if link}}
+    <a href="{{link}}" target="_blank">{{description}}, {{location}}</a>
+    {{else}}
     <span>{{description}}, {{location}}</span>
+    {{/if}}
   </li>
   {{/each}}
 </ul>
