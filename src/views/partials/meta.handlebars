@@ -3,7 +3,7 @@
 {{#if isHomepage}}
 <meta property="og:url" content="{{url}}" />
 {{else}}
-<meta property="og:url" content="{{url}}/{{slug}}" />
+<meta property="og:url" content="{{getUrl slug}}" />
 {{/if}}
 <meta property="og:title" content="{{labels.common.baseTitle}} | {{title}}" />
 <meta property="og:image" content="{{socialMediaCover}}" />
