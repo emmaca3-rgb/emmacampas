@@ -187,26 +187,15 @@ function setupLightbox() {
       lightbox.classList.toggle("visible");
 
       if (el.dataset.preview === "video") {
-        content.innerHTML = `
-          <iframe
-            src="https://www.youtube.com/embed/${el.dataset.id}"
-            title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-          </iframe>
-        `;
-        setTimeout(() => lightbox.classList.toggle("ready"), 500);
+        const iframe = createIframe(el.dataset.id);
+        content.appendChild(iframe);
+        iframe.onload = () => lightbox.classList.toggle("ready");
         return;
       }
 
-      const img = new Image();
-      img.src = el.dataset.src;
-      img.onload = () => {
-        content.innerHTML = `
-          <img src="${el.dataset.src}" data-is-landscape="${el.dataset.isLandscape}"/>
-        `;
-        lightbox.classList.toggle("ready");
-      };
+      const image = createImage({ alt: el.alt, ...el.dataset });
+      content.appendChild(image);
+      image.onload = () => lightbox.classList.toggle("ready");
     });
   });
 
@@ -215,4 +204,23 @@ function setupLightbox() {
       closeLightbox();
     }
   }
+}
+
+function createIframe(id) {
+  const iframe = document.createElement("iframe");
+  iframe.src = `https://www.youtube.com/embed/${id}`;
+  iframe.title = "YouTube video player";
+  iframe.allow =
+    "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+  iframe.referrerpolicy = "strict-origin-when-cross-origin";
+  iframe.allowfullscreen = true;
+  return iframe;
+}
+
+function createImage({ src, alt, isLandscape }) {
+  const image = document.createElement("img");
+  image.src = src;
+  image.alt = alt;
+  image.dataset.isLandscape = isLandscape;
+  return image;
 }

@@ -54,6 +54,7 @@
       > iframe {
         aspect-ratio: 16/9;
         width: min(90vw, 1024px);
+        border: none;
       }
       > img {
         height: min(90vh, 1024px);
