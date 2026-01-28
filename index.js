@@ -1,5 +1,5 @@
 import path from "node:path";
-import { render } from "goffre";
+import { render } from "@moonwave99/goffre";
 import { marked } from "marked";
 import _ from "lodash";
 import { getData, translate as translateSanity } from "./sanity.js";
