@@ -1,6 +1,7 @@
 {
   "name": "emma",
   "description": "Emma Campás website",
+  "homepage": "https://emmacampas.com",
   "private": true,
   "version": "0.0.1",
   "type": "module",

@@ -3,6 +3,7 @@ import { render } from "@moonwave99/goffre";
 import { marked } from "marked";
 import _ from "lodash";
 import { getData, translate as translateSanity } from "./sanity.js";
+import pkg from "./package.json" with { type: "json" };
 import labels from "./labels.json" with { type: "json" };
 
 const data = await getData({ cached: true });
@@ -10,7 +11,7 @@ const data = await getData({ cached: true });
 const url =
   process.env.NODE_ENV === "dev"
     ? "http://localhost:1234"
-    : process.env.URL || "https://emmacampas.com";
+    : process.env.URL || pkg.homepage;
 const defaultLanguage = "en";
 const languages = [...new Set(data.pages.map((x) => x.language))];
 
