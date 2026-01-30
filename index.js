@@ -12,6 +12,8 @@ const url =
   process.env.NODE_ENV === "dev"
     ? "http://localhost:1234"
     : process.env.URL || pkg.homepage;
+
+const thisYear = new Date().getFullYear();
 const defaultLanguage = "en";
 const languages = [...new Set(data.pages.map((x) => x.language))];
 
@@ -79,6 +81,7 @@ function getHomepage(language) {
     slug: language === defaultLanguage ? "index" : language,
     title: translate("subtitle", language),
     description: translate("description", language),
+    thisYear,
     url,
     isHomepage: true,
     sitemap: {
@@ -102,25 +105,24 @@ await render({
   domain: url,
   pages: [
     ...languages.map(getHomepage),
-    ...data.pages.map((page) => {
-      return {
-        sitemap: {
-          changefreq: "monthly",
-          priority: 0.8,
-        },
-        ...page,
-        url,
-        template: getTemplate(page),
-        slug: getPageSlug(page),
-        labels,
-        dates: sortedDates,
-        pastDates,
-        nextDates,
-        gallery: data.gallery,
-        links: data.homepage.links,
-        socialMediaCover: data.homepage.socialMediaCover,
-      };
-    }),
+    ...data.pages.map((page) => ({
+      sitemap: {
+        changefreq: "monthly",
+        priority: 0.8,
+      },
+      ...page,
+      thisYear,
+      url,
+      template: getTemplate(page),
+      slug: getPageSlug(page),
+      labels,
+      dates: sortedDates,
+      pastDates,
+      nextDates,
+      gallery: data.gallery,
+      links: data.homepage.links,
+      socialMediaCover: data.homepage.socialMediaCover,
+    })),
   ],
   sitemap: {
     generate: true,
