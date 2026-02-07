@@ -13,28 +13,32 @@ const url =
     ? "http://localhost:1234"
     : process.env.URL || pkg.homepage;
 
-const thisYear = new Date().getFullYear();
 const defaultLanguage = "en";
 const languages = [...new Set(data.pages.map((x) => x.language))];
-const navigation = ["index", "about", "dates", "media", "contact"];
 
 const sortedDates = data.events.toSorted((a, b) =>
   new Date(a.date) < new Date(b.date) ? 1 : -1,
 );
 
-const nextDates = sortedDates
-  .filter((x) => new Date(x.date) > new Date())
-  .slice(0, 5);
-
-const pastDates = sortedDates.filter((x) => new Date(x.date) < new Date());
+const additionalData = {
+  version: process.env.GITHUB_SHA,
+  thisYear: new Date().getFullYear(),
+  url,
+  dates: sortedDates,
+  nextDates: sortedDates
+    .filter((x) => new Date(x.date) > new Date())
+    .slice(0, 5),
+  pastDates: sortedDates.filter((x) => new Date(x.date) < new Date()),
+  labels,
+  navigation: ["index", "about", "dates", "media", "contact"],
+  socialMediaCover: data.homepage.socialMediaCover,
+  gallery: data.gallery,
+  links: data.homepage.links,
+};
 
 const renderer = {
-  paragraph: (token) => {
-    if (token.startsWith("<figure")) {
-      return token;
-    }
-    return `<p>${token}</p>`;
-  },
+  paragraph: (token) =>
+    token.startsWith("<figure") ? token : `<p>${token}</p>`,
 };
 
 marked.use(renderer);
@@ -86,13 +90,6 @@ function translate(key, language) {
   return _.get(labels, `${language}.${key}`) || `${language}.${key}`;
 }
 
-function getTemplate(page) {
-  if (page.id === "about") {
-    return null;
-  }
-  return page.id;
-}
-
 function getHomepage(language) {
   return {
     id: "homepage",
@@ -101,24 +98,13 @@ function getHomepage(language) {
     slug: language === defaultLanguage ? "index" : language,
     title: translate("subtitle", language),
     description: translate("description", language),
-    thisYear,
-    url,
     isHomepage: true,
     sitemap: {
       priority: 1,
     },
-    nextDates,
-    labels,
-    navigation,
+    ...additionalData,
     ...data.homepage,
   };
-}
-
-function getPageSlug(page) {
-  if (page.language === defaultLanguage) {
-    return page.id;
-  }
-  return page.slug || `${page.language}/${page.id}`;
 }
 
 await render({
@@ -127,23 +113,19 @@ await render({
   pages: [
     ...languages.map(getHomepage),
     ...data.pages.map((page) => ({
+      ...page,
+      ...additionalData,
       sitemap: {
         changefreq: "monthly",
         priority: 0.8,
       },
-      ...page,
-      thisYear,
-      url,
-      template: getTemplate(page),
-      slug: getPageSlug(page),
-      labels,
-      dates: sortedDates,
-      pastDates,
-      nextDates,
-      navigation,
-      gallery: data.gallery,
-      links: data.homepage.links,
-      socialMediaCover: data.homepage.socialMediaCover,
+      template: page.id === "about" ? null : page.id,
+      slug: (({ language, id, slug }) => {
+        if (language === defaultLanguage) {
+          return id;
+        }
+        return slug || `${language}/${id}`;
+      })(page),
     })),
   ],
   sitemap: {
