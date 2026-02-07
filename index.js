@@ -10,7 +10,7 @@ const data = await getData({ cached: true });
 
 const url =
   process.env.NODE_ENV === "dev"
-    ? "http://localhost:1234"
+    ? `http://localhost:${process.env.PORT || 1234}`
     : process.env.URL || pkg.homepage;
 
 const defaultLanguage = "en";
