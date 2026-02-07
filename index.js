@@ -21,7 +21,7 @@ const sortedDates = data.events.toSorted((a, b) =>
 );
 
 const additionalData = {
-  version: process.env.GITHUB_SHA,
+  version: process.env.VERSION,
   thisYear: new Date().getFullYear(),
   url,
   dates: sortedDates,
