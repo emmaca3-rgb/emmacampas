@@ -16,6 +16,7 @@ const url =
 const thisYear = new Date().getFullYear();
 const defaultLanguage = "en";
 const languages = [...new Set(data.pages.map((x) => x.language))];
+const navigation = ["index", "about", "dates", "media", "contact"];
 
 const sortedDates = data.events.toSorted((a, b) =>
   new Date(a.date) < new Date(b.date) ? 1 : -1,
@@ -38,22 +39,41 @@ const renderer = {
 
 marked.use(renderer);
 
+function formatUrl({ slug, url, language }) {
+  return [
+    url,
+    language === defaultLanguage || slug.startsWith(language) ? null : language,
+    slug,
+  ]
+    .filter(Boolean)
+    .join("/")
+    .replace(/\/index$/, "");
+}
+
 const helpers = {
   translate,
   translateSanity,
-  getNavLink: (id, options) => {
-    const { language } = options.data.root;
-    if (id === "homepage") {
-      return language === defaultLanguage ? "/" : `/${language}`;
-    }
-    return language === defaultLanguage ? `/${id}` : `/${language}/${id}`;
-  },
   isLandscape: (ratio) => ratio > 1,
-  getUrl: (slug, context) =>
-    [context.data.root.url, slug].join("/").replace(/index$/, ""),
+  getUrl: (pageSlug, context) =>
+    formatUrl({ ...context.data.root, slug: pageSlug }),
   markdown: (content) => marked(content),
-  geLangClass: (language, currentLanguage) =>
-    language === currentLanguage ? "current" : "",
+  getNavLabel: (section, context) =>
+    translate(`sections.${section}`, context.data.root.language),
+  geLangClass: (language, context) =>
+    language === context.data.root.language ? "current" : "",
+  getNavClass: (pageSlug, context) => {
+    const url = formatUrl(context.data.root);
+    const { slug, language } = context.data.root;
+    if (language === defaultLanguage && pageSlug.endsWith("index")) {
+      return slug === pageSlug ? "current" : "";
+    }
+    const currentPageSlug = pageSlug.replace(/index$/, "");
+    return url.endsWith(
+      !currentPageSlug ? context.data.root.language : currentPageSlug,
+    )
+      ? "current"
+      : "";
+  },
   formatDate: (date, language = defaultLanguage) =>
     new Date(date).toLocaleDateString(`${language}-${language.toUpperCase()}`, {
       day: "numeric",
@@ -89,6 +109,7 @@ function getHomepage(language) {
     },
     nextDates,
     labels,
+    navigation,
     ...data.homepage,
   };
 }
@@ -119,6 +140,7 @@ await render({
       dates: sortedDates,
       pastDates,
       nextDates,
+      navigation,
       gallery: data.gallery,
       links: data.homepage.links,
       socialMediaCover: data.homepage.socialMediaCover,

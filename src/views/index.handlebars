@@ -4,10 +4,10 @@
   <div class="container">
     <div class="content">
       <div data-animate-in>
-        <h2>{{translate 'homepage.intro' @root.language }}</h2>
+        <h2>{{translate 'index.intro' @root.language }}</h2>
         <p>{{{ translateSanity intro @root.language }}}</p>
       </div>
-      <a href="{{url}}{{getNavLink 'about'}}" class="section-link">{{ translate 'homepage.links.about' language }}</a>
+      <a href="{{getUrl 'about'}}" class="section-link">{{ translate 'index.links.about' language }}</a>
     </div>
   </div>
 </section>
@@ -25,7 +25,7 @@
           {{/videos}}
         </ul>
       </div>
-      <a href="{{url}}{{getNavLink 'media'}}" class="section-link">{{ translate 'homepage.links.media' language }}</a>
+      <a href="{{getUrl 'media'}}" class="section-link">{{ translate 'index.links.media' language }}</a>
     </div>
   </div>
 </section>
@@ -37,7 +37,7 @@
         <h2>{{ translate 'sections.dates' language }}</h2>
         {{> dates dates=nextDates }}
       </div>
-      <a href="{{url}}{{getNavLink 'dates'}}" class="section-link">{{ translate 'homepage.links.dates' language }}</a>
+      <a href="{{getUrl 'dates'}}" class="section-link">{{ translate 'index.links.dates' language }}</a>
     </div>
   </div>
 </section>

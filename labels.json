@@ -13,13 +13,13 @@
     "subtitle": "Classical Guitar and Flamenco",
     "description": "This is the website of Emma Campàs, classical and flamenco guitarist.",
     "sections": {
-      "homepage": "Home",
+      "index": "Home",
       "about": "Bio",
       "dates": "Concerts",
       "media": "Media",
       "contact": "Contact"
     },
-    "homepage": {
+    "index": {
       "intro": "Welcome",
       "links": {
         "about": "Read more",
@@ -43,13 +43,13 @@
     "subtitle": "Guitarra clásica y flamenca",
     "description": "Bienvenido a la pagina de Emma Campàs, guitarrista clasica y flamenca.",
     "sections": {
-      "homepage": "Inicio",
+      "index": "Inicio",
       "about": "Bio",
       "dates": "Conciertos",
       "media": "Media",
       "contact": "Contacto"
     },
-    "homepage": {
+    "index": {
       "intro": "Bienvenidos",
       "links": {
         "about": "Leer mas",
@@ -73,13 +73,13 @@
     "subtitle": "Guitarrista de clàssic i flamenc",
     "description": "Benvingut a la pagina de Emma Campàs, guitarrista clasica y flamenca.",
     "sections": {
-      "homepage": "Inicio",
+      "index": "Inicio",
       "about": "Bio",
       "dates": "Conciertos",
       "media": "Media",
       "contact": "Contactos"
     },
-    "homepage": {
+    "index": {
       "intro": "Bienvenidos",
       "links": {
         "about": "Leer mas",
@@ -103,13 +103,13 @@
     "subtitle": "Klassik und Flamenco Gitarre",
     "description": "Willkommen zur Webseite von Emma Campàs, Klassik und Flamenco Gitarristin.",
     "sections": {
-      "homepage": "Home",
+      "index": "Home",
       "about": "Bio",
       "dates": "Konzerte",
       "media": "Media",
       "contact": "Kontakt"
     },
-    "homepage": {
+    "index": {
       "intro": "Willkommen",
       "links": {
         "about": "Mehr lesen",
