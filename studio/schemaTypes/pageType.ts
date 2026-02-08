@@ -4,7 +4,7 @@ import {supportedLanguages} from './localeStringType'
 
 export const pageType = defineType({
   name: 'page',
-  title: 'Page',
+  title: 'Pages',
   type: 'document',
   groups: [
     {

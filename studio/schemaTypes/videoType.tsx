@@ -4,7 +4,7 @@ import VideoPreview from '../components/VideoPreview'
 
 export const videoType = defineType({
   name: 'video',
-  title: 'Video',
+  title: 'Videos',
   type: 'document',
   fields: [
     defineField({
