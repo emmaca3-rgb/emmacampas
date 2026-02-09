@@ -1,20 +1,6 @@
-# Emma
+# emmacampas.com
 
 Website of Emma Campàs.
 
-## Preview
-
-https://emmaca3-rgb.github.io/emmacampas/
-
-## Content Editor
-
-[Sanity Studio](https://emmacampas.sanity.studio/)
-
-## Roadmap
-
-- finishing translations
-- fix meta tags
-
-## Version
-
-0.2.0
+- [Preview](https://emmaca3-rgb.github.io/emmacampas/)
+- [Sanity Studio](https://emma-campas.sanity.studio/)
