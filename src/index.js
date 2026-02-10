@@ -52,6 +52,7 @@ window.addEventListener("DOMContentLoaded", async () => {
   loadCover();
   setupAnimations();
   setupLightbox();
+  processExternalLinks();
   const navToggler = document.querySelector(".navToggler");
   navToggler.addEventListener("click", () =>
     document.body.classList.toggle("isNavOpen"),
@@ -223,4 +224,10 @@ function createImage({ src, alt, isLandscape }) {
   image.alt = alt;
   image.dataset.isLandscape = isLandscape;
   return image;
+}
+
+function processExternalLinks() {
+  [...document.querySelectorAll("a:not([target='_blank'])")]
+    .filter(({ href }) => new URL(href).origin !== window.location.origin)
+    .forEach((a) => a.setAttribute("target", "_blank"));
 }
