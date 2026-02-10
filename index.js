@@ -16,9 +16,13 @@ const url =
 const defaultLanguage = "en";
 const languages = [...new Set(data.pages.map((x) => x.language))];
 
-const sortedDates = data.events.toSorted((a, b) =>
-  new Date(a.date) < new Date(b.date) ? 1 : -1,
-);
+function sortByDate(direction = "asc") {
+  return (a, b) =>
+    (new Date(a.date) < new Date(b.date) ? 1 : -1) *
+    (direction === "asc" ? -1 : 1);
+}
+
+const sortedDates = data.events.toSorted(sortByDate());
 
 const additionalData = {
   version: process.env.VERSION,
@@ -27,7 +31,9 @@ const additionalData = {
   dates: sortedDates,
   nextDates: sortedDates
     .filter((x) => new Date(x.date) > new Date())
-    .slice(0, 5),
+    .toSorted(sortByDate("desc"))
+    .slice(0, 5)
+    .toSorted(sortByDate("asc")),
   pastDates: sortedDates.filter((x) => new Date(x.date) < new Date()),
   labels,
   navigation: ["index", "about", "dates", "media", "contact"],
