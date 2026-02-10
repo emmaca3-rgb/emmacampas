@@ -52,18 +52,18 @@
     "index": {
       "intro": "Bienvenidos",
       "links": {
-        "about": "Leer mas",
-        "dates": "Ver mas conciertos",
-        "media": "Todos los videos"
+        "about": "Leer más",
+        "dates": "Ver más conciertos",
+        "media": "Todos los vídeos"
       }
     },
     "dates": {
       "upcoming": "Próximas Fechas",
       "past": "Fechas pasadas",
-      "none": "Ningun concierto planeado."
+      "none": "Ningún concierto planeado."
     },
     "media": {
-      "videos": "Videos",
+      "videos": "Vídeos",
       "gallery": "Galeria",
       "preview": "Preview"
     }
@@ -71,29 +71,29 @@
   "ca": {
     "title": "Emma Campàs",
     "subtitle": "Guitarrista de clàssic i flamenc",
-    "description": "Benvingut a la pagina de Emma Campàs, guitarrista clasica y flamenca.",
+    "description": "Benvingut a la pagina de Emma Campàs, guitarrista de clàssic i flamenc.",
     "sections": {
-      "index": "Inicio",
+      "index": "Inici",
       "about": "Bio",
-      "dates": "Conciertos",
+      "dates": "Concerts",
       "media": "Media",
-      "contact": "Contactos"
+      "contact": "Contacte"
     },
     "index": {
-      "intro": "Bienvenidos",
+      "intro": "Benvinguts",
       "links": {
-        "about": "Leer mas",
-        "dates": "Ver mas conciertos",
-        "media": "Todos los videos"
+        "about": "Llegir més",
+        "dates": "Veure més concerts",
+        "media": "Tots els vídeos"
       }
     },
     "dates": {
-      "upcoming": "Proximas Fechas",
-      "past": "Fechas pasadas",
-      "none": "Ningun concierto planeado."
+      "upcoming": "Properes dates",
+      "past": "Dates passades",
+      "none": "Cap concert planejat."
     },
     "media": {
-      "videos": "Videos",
+      "videos": "Vídeos",
       "gallery": "Galeria",
       "preview": "Preview"
     }
