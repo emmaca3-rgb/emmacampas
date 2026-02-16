@@ -1,6 +1,25 @@
 import {defineField, defineType} from 'sanity'
+import {BlockContentIcon} from '@sanity/icons'
 import {baseLanguage} from './localeStringType'
 import VideoPreview from '../components/VideoPreview'
+
+const validationMessages = {
+  title: 'The English title should be present at least',
+  link: 'Video URL should be in the form: https://www.youtube.com/watch?v=xxxxxxxxxxx',
+}
+
+function validateLink(link: string | undefined) {
+  if (typeof link === 'undefined') {
+    return false
+  }
+  try {
+    const url = new URL(link)
+    const params = new URLSearchParams(url.search)
+    return params.get('v')?.length === 11
+  } catch {
+    return false
+  }
+}
 
 export const videoType = defineType({
   name: 'video',
@@ -11,11 +30,24 @@ export const videoType = defineType({
       title: 'Video Title',
       name: 'title',
       type: 'localeString',
+      validation: (rule) =>
+        rule
+          .required()
+          .custom(
+            (val: undefined | Record<string, string>) =>
+              Boolean(val && val[baseLanguage?.value as string]) || validationMessages.title,
+          )
+          .error(),
     }),
     defineField({
       title: 'Video Link',
       name: 'link',
       type: 'url',
+      validation: (rule) =>
+        rule
+          .required()
+          .custom((link) => validateLink(link) || validationMessages.link)
+          .error(),
     }),
   ],
   preview: {
@@ -24,9 +56,14 @@ export const videoType = defineType({
       link: 'link',
     },
     prepare({title, link}) {
+      const previewTitle = title ? title[baseLanguage?.value as string] : 'Untitled'
       return {
-        title: title[baseLanguage?.value as string],
-        media: <VideoPreview link={link} title={title[baseLanguage?.value as string]} />,
+        title: previewTitle,
+        media: validateLink(link) ? (
+          <VideoPreview link={link} title={previewTitle} />
+        ) : (
+          <BlockContentIcon />
+        ),
       }
     },
   },

@@ -1,6 +1,12 @@
 import {defineType} from 'sanity'
 
-export const supportedLanguages = [
+export type Language = {
+  title: string
+  value: string
+  isDefault?: boolean
+}
+
+export const supportedLanguages: Language[] = [
   {title: 'English', value: 'en', isDefault: true},
   {title: 'Spanish', value: 'es'},
   {title: 'Catalan', value: 'ca'},
