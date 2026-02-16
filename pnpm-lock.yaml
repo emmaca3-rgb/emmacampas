@@ -15,6 +15,9 @@ importers:
       '@moonwave99/goffre':
         specifier: ^0.0.6
         version: 0.0.6
+      '@parcel/config-default':
+        specifier: ^2.16.4
+        version: 2.16.4(@parcel/core@2.16.4(@swc/helpers@0.5.18))(@swc/helpers@0.5.18)
       '@parcel/packager-xml':
         specifier: ^2.16.1
         version: 2.16.4(@parcel/core@2.16.4(@swc/helpers@0.5.18))
