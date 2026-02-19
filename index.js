@@ -26,7 +26,6 @@ const sortedDates = data.events.toSorted(sortByDate());
 
 const additionalData = {
   version: process.env.VERSION,
-  thisYear: new Date().getFullYear(),
   url,
   dates: sortedDates,
   nextDates: sortedDates
@@ -41,13 +40,6 @@ const additionalData = {
   gallery: data.gallery,
   links: data.homepage.links,
 };
-
-const renderer = {
-  paragraph: (token) =>
-    token.startsWith("<figure") ? token : `<p>${token}</p>`,
-};
-
-marked.use(renderer);
 
 function formatUrl({ slug, url, language }) {
   return [
@@ -139,8 +131,5 @@ await render({
   },
   handlebars: {
     helpers,
-  },
-  markdown: {
-    renderer,
   },
 });
