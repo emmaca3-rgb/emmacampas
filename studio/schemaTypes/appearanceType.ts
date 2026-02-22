@@ -19,9 +19,22 @@ export const appearanceType = defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
+      title: 'Type',
+      name: 'type',
+      type: 'string',
+      validation: (rule) => rule.required(),
+      options: {
+        list: [
+          {title: 'Interview', value: 'interview'},
+          {title: 'Article', value: 'article'},
+          {title: 'Various', value: 'various'},
+        ],
+      },
+    }),
+    defineField({
       title: 'Title',
       name: 'title',
-      type: 'localeText',
+      type: 'localeString',
       validation: (rule) => rule.required(),
     }),
     defineField({
