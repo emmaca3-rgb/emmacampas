@@ -2,7 +2,7 @@ import {type StructureBuilder, ListItemBuilder} from 'sanity/structure'
 
 import {filteredDocumentListItems} from 'sanity-plugin-singleton-management'
 
-const order = ['page', 'photo', 'video', 'event', 'quote']
+const order = ['page', 'photo', 'video', 'event', 'appearance', 'quote']
 
 export const structure = (S: StructureBuilder, context) => {
   const entities = filteredDocumentListItems({S, context})

@@ -7,6 +7,7 @@ import {textBlockType} from './textBlockType'
 import {getLocaleType} from './localeStringType'
 import {homepageType} from './homepageType'
 import {galleryType} from './galleryType'
+import {appearanceType} from './appearanceType.ts'
 
 export const schemaTypes = [
   homepageType,
@@ -18,5 +19,6 @@ export const schemaTypes = [
   photoType,
   pageType,
   eventType,
+  appearanceType,
   videoType,
 ]
