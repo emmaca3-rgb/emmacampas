@@ -31,6 +31,7 @@ export async function getData({ cached }) {
     events: await getEvents(),
     homepage: await getHomepage(),
     gallery: await getGallery(),
+    appearances: await getAppearances(),
   };
 
   await fs.writeFile("./sanity-dump.json", JSON.stringify(data));
@@ -54,6 +55,12 @@ export async function getPages() {
         },
         cover -> {caption, attribution, "url": image.asset->url}
       }`,
+  );
+}
+
+export async function getAppearances() {
+  return getClient().fetch(
+    '*[_type=="appearance"] { date, description, title, type, link }',
   );
 }
 

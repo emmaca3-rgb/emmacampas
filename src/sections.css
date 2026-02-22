@@ -146,6 +146,34 @@
         }
       }
 
+      .appearances-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        font-size: 1.5rem;
+        @media screen and (max-width: 640px) {
+          font-size: 1.5rem;
+        }
+        li {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+          time {
+            font-weight: bold;
+            font-family: var(--sans-serif);
+          }
+          a {
+            color: var(--color-light);
+            font-family: var(--sans-serif);
+          }
+          p {
+            font-size: 1.5rem;
+            font-family: var(--serif);
+          }
+        }
+      }
+
       .gallery {
         list-style: none;
         display: grid;

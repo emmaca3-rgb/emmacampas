@@ -35,7 +35,8 @@
     "media": {
       "videos": "Videos",
       "gallery": "Gallery",
-      "preview": "Preview"
+      "preview": "Preview",
+      "appearances": "Appearances"
     }
   },
   "es": {
@@ -65,7 +66,8 @@
     "media": {
       "videos": "Vídeos",
       "gallery": "Galería",
-      "preview": "Preview"
+      "preview": "Preview",
+      "appearances": "Appearances"
     }
   },
   "ca": {
@@ -95,7 +97,8 @@
     "media": {
       "videos": "Vídeos",
       "gallery": "Galeria",
-      "preview": "Preview"
+      "preview": "Preview",
+      "appearances": "Appearances"
     }
   },
   "de": {
@@ -125,7 +128,8 @@
     "media": {
       "videos": "Videos",
       "gallery": "Bilder",
-      "preview": "Preview"
+      "preview": "Preview",
+      "appearances": "Appearances"
     }
   }
 }

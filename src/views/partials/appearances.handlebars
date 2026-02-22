@@ -1,0 +1,11 @@
+{{#if appearances.length}}
+<ul class="appearances-list" data-animate-in>
+  {{#each appearances}}
+  <li>
+    <time datetime="{{date}}">{{formatDate date @root.language}}</time>
+    <a href="{{link}}" target="_blank">{{translateSanity title @root.language}}</a>
+    <p>{{translateSanity description @root.language}}</p>
+  </li>
+  {{/each}}
+</ul>
+{{/if}}

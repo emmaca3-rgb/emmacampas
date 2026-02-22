@@ -38,6 +38,7 @@ const additionalData = {
   navigation: ["index", "about", "dates", "media", "contact"],
   socialMediaCover: data.homepage.socialMediaCover,
   gallery: data.gallery,
+  appearances: data.appearances.toSorted(sortByDate("desc")),
   links: data.homepage.links,
 };
 
