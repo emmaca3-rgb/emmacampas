@@ -23,16 +23,16 @@ function sortByDate(direction = "asc") {
 }
 
 const sortedDates = data.events.toSorted(sortByDate());
+const nextDates = sortedDates
+  .filter((x) => new Date(x.date) > new Date())
+  .toSorted(sortByDate("asc"));
 
 const additionalData = {
   version: process.env.VERSION,
   url,
   dates: sortedDates,
-  nextDates: sortedDates
-    .filter((x) => new Date(x.date) > new Date())
-    .toSorted(sortByDate("desc"))
-    .slice(0, 5)
-    .toSorted(sortByDate("asc")),
+  nextDates,
+  nextDatesHomePage: nextDates.slice(0, 5),
   pastDates: sortedDates.filter((x) => new Date(x.date) < new Date()),
   labels,
   navigation: ["index", "about", "dates", "media", "contact"],
