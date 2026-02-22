@@ -44,4 +44,28 @@ export const appearanceType = defineType({
       validation: (rule) => rule.required(),
     }),
   ],
+  preview: {
+    select: {
+      title: 'title',
+      date: 'date',
+    },
+    prepare({title, date}) {
+      return {
+        title: title[baseLanguage?.value as string],
+        subtitle: new Date(date).toLocaleDateString(),
+      }
+    },
+  },
+  orderings: [
+    {
+      title: 'Appearance Date, New First',
+      name: 'dateDesc',
+      by: [{field: 'date', direction: 'desc'}],
+    },
+    {
+      title: 'Appearance Date, Old First',
+      name: 'dateAsc',
+      by: [{field: 'date', direction: 'asc'}],
+    },
+  ],
 })
