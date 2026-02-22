@@ -7,7 +7,7 @@ on:
       - main
 
 env:
-  URL: https://emmaca3-rgb.github.io/emmacampas
+  URL: https://emmacampas.com
   VERSION: ${{ github.sha }}
 
 jobs:
