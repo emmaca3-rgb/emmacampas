@@ -9,7 +9,7 @@
         <p>{{ subtitle}} </p>
       </header>
       <section>
-        <h2>{{ translate 'media.videos' language }}</h2>
+        <h2 id="videos">{{ translate 'media.videos' language }}</h2>
         <ul class="gallery videos" data-animate-in>
           {{#each gallery.videos}}
           <li>
@@ -19,7 +19,7 @@
         </ul>
       </section>
       <section>
-        <h2>{{ translate 'media.gallery' language }}</h2>
+        <h2 id="images">{{ translate 'media.gallery' language }}</h2>
         <ul class="gallery images" data-animate-in>
           {{#each gallery.pictures}}
           <li>
@@ -29,7 +29,7 @@
         </ul>
       </section>
       <section>
-        <h2>{{ translate 'media.appearances' language }}</h2>
+        <h2 id="appearances">{{ translate 'media.appearances' language }}</h2>
         {{> appearances }}
       </section>
     </div>
