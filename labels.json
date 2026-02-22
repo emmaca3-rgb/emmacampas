@@ -67,7 +67,7 @@
       "videos": "Vídeos",
       "gallery": "Galería",
       "preview": "Preview",
-      "appearances": "Appearances"
+      "appearances": "Prensa"
     }
   },
   "ca": {
@@ -98,7 +98,7 @@
       "videos": "Vídeos",
       "gallery": "Galeria",
       "preview": "Preview",
-      "appearances": "Appearances"
+      "appearances": "Premsa"
     }
   },
   "de": {
@@ -129,7 +129,7 @@
       "videos": "Videos",
       "gallery": "Bilder",
       "preview": "Preview",
-      "appearances": "Appearances"
+      "appearances": "Press"
     }
   }
 }
