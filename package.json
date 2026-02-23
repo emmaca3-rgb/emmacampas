@@ -22,7 +22,7 @@
     "build:client": "parcel build 'output/**/*.{html,xml}' --public-url $URL",
     "build:site": "node index.js",
     "clean": "rm -rf dist output sanity-dump.json",
-    "rosette": "npx nodemon rosette.js"
+    "rosette": "node --watch rosette.js"
   },
   "dependencies": {
     "motion": "^12.23.24"
