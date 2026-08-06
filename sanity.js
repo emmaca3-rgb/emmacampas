@@ -66,7 +66,7 @@ export async function getAppearances() {
 
 export async function getEvents() {
   return getClient().fetch(
-    '*[_type=="event"] { date, description, location, link }',
+    '*[_type == "event"] | order(date asc)`{ date, description, location, link }',
   );
 }
 
