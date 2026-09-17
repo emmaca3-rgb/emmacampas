@@ -33,7 +33,9 @@ const additionalData = {
   dates: sortedDates,
   nextDates,
   nextDatesHomePage: nextDates.slice(0, 5),
-  pastDates: sortedDates.filter((x) => new Date(x.date) < new Date()),
+  pastDates: sortedDates
+    .filter((x) => new Date(x.date) < new Date())
+    .toReversed(),
   labels,
   navigation: ["index", "about", "dates", "media", "contact"],
   socialMediaCover: data.homepage.socialMediaCover,

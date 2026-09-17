@@ -15,7 +15,7 @@
     "url": "https://www.diegocaponera.com"
   },
   "scripts": {
-    "start": "NODE_ENV=dev pnpm concurrently 'pnpm run dev:site' 'pnpm run dev:client'",
+    "start": "NODE_ENV=dev pnpm run --parallel /^dev:/",
     "build": "pnpm run build:site && pnpm run build:client",
     "dev:client": "parcel 'output/**/*.{html,xml}'",
     "dev:site": "pnpm nodemon -e js,json,md,handlebars --watch data --watch src --watch index.js",
@@ -34,7 +34,6 @@
     "@parcel/transformer-xml": "^2.16.4",
     "@sanity/client": "^7.14.1",
     "baseline-browser-mapping": "^2.9.18",
-    "concurrently": "^9.2.1",
     "lodash": "^4.17.21",
     "marked": "^17.0.0",
     "nodemon": "^3.1.11",
