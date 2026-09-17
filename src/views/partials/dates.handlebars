@@ -4,9 +4,12 @@
   <li>
     <time datetime="{{date}}">{{formatDate date @root.language}}</time>
     {{#if link}}
-    <a href="{{link}}" target="_blank">{{description}}, {{location}}</a>
+    <a class="description" href="{{link}}" target="_blank">{{description}}</a>
     {{else}}
-    <span>{{description}}, {{location}}</span>
+    <span class="description">{{description}}</span>
+    {{/if}}
+    {{#if location}}
+    <a class="location" href="{{getLocationLink location}}" target="_blank">{{location}}</a>
     {{/if}}
   </li>
   {{/each}}

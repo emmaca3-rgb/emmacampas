@@ -85,6 +85,8 @@ const helpers = {
       month: "short",
       year: "numeric",
     }),
+  getLocationLink: (location) =>
+    `https://www.google.it/maps?q=${encodeURI(location)}`,
 };
 
 function translate(key, language) {

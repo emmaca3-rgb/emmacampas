@@ -129,19 +129,41 @@
         display: flex;
         flex-direction: column;
         gap: 1rem;
+        line-height: 1.2;
         @media screen and (max-width: 640px) {
           font-size: 1.5rem;
         }
         li {
-          display: flex;
-          gap: 3rem;
+          display: grid;
+          grid-template-areas:
+            "a b"
+            "a c";
+          grid-template-columns: 12rem 1fr;
           time {
-            flex-basis: 11rem;
-            flex-shrink: 0;
+            grid-area: a;
             font-weight: bold;
           }
-          span {
-            flex: 1;
+          .description {
+            grid-area: b;
+            text-decoration: none;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+          .location {
+            grid-area: c;
+            font-size: 1rem;
+            font-family: var(--sans-serif);
+            padding-left: 1.25rem;
+            background-image: url("~src/assets/icons/location.svg");
+            background-repeat: no-repeat;
+            background-size: 1rem;
+            background-position-y: center;
+            text-decoration: none;
+            line-height: 2.5rem;
+            &:hover {
+              text-decoration: underline;
+            }
           }
         }
       }
@@ -295,11 +317,18 @@
     align-items: center;
   }
 
-  .section .container .content .dates-list li {
+  .section .container .content .dates-list {
+    display: flex;
     flex-direction: column;
-    gap: 0;
-    time {
-      flex-basis: 1;
+    gap: 2.5rem;
+    li {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      .location {
+        line-height: 1.5rem;
+        font-size: 0.8rem;
+      }
     }
   }
 
