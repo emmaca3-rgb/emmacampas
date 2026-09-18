@@ -25,6 +25,7 @@
     "rosette": "node --watch rosette.js"
   },
   "dependencies": {
+    "glightbox": "^3.3.1",
     "motion": "^12.23.24"
   },
   "devDependencies": {

@@ -258,7 +258,11 @@
                 rgba(0, 0, 0, 0.23) 0px 3px 6px;
             }
 
-            > img {
+            > a {
+              display: contents;
+            }
+
+            .thumbnail {
               display: block;
               width: 100%;
               box-shadow:

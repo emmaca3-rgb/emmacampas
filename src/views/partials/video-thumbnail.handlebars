@@ -1,10 +1,12 @@
 <figure>
   <div class="media-cover-wrapper">
-    <img
-      src="https://img.youtube.com/vi/{{id}}/hqdefault.jpg"
-      alt="Preview of {{description}}"
-      data-preview="video"
-      data-id="{{id}}"/>
+    <a href="{{link}}" data-gallery="video">
+      <img
+        class="thumbnail"
+        src="https://img.youtube.com/vi/{{id}}/hqdefault.jpg"
+        alt="Preview of {{description}}"
+        data-id="{{id}}"/>
+    </a>
     <img class="preview-icon" alt="Preview" src="~/src/assets/icons/preview.svg" width="36" height="36" />
   </div>
   <figcaption>{{translateSanity title @root.language}}</figcaption>

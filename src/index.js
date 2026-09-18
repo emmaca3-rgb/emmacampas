@@ -1,5 +1,6 @@
 import { stagger, inView } from "motion";
 import { animate } from "motion/mini";
+import GLightbox from "glightbox";
 
 const NAV_SCROLL_THRESHOLD = 150;
 const INITIAL_DELAY = 500;
@@ -133,97 +134,20 @@ function setupAnimations() {
 }
 
 async function loadCover() {
-  const coverLink = document.querySelector("link[data-cover]");
-  if (!coverLink) {
-    return;
-  }
-  await preload(coverLink.href);
+  const coverURL = document.body.dataset.cover;
+  await preload(coverURL);
   const cover = document.querySelector(".cover");
-
-  cover.querySelector(".image").style.backgroundImage =
-    `url(${coverLink.href})`;
-
+  cover.querySelector(".image").style.backgroundImage = `url(${coverURL})`;
   cover.classList.toggle("loaded");
 }
 
 function setupLightbox() {
-  const lightbox = document.querySelector(".lightbox");
-  const content = lightbox?.querySelector(".lightbox-content");
-  const closeButton = lightbox?.querySelector(".lightbox-close");
-
-  if (!lightbox) {
-    console.warn("No lightbox element found.");
-    return;
-  }
-
-  function closeLightbox() {
-    lightbox.classList.remove("ready");
-    lightbox.addEventListener(
-      "transitionend",
-      (event) => {
-        if (typeof event.target.dataset.lightboxClose === "undefined") {
-          return;
-        }
-        lightbox.classList.remove("visible");
-        content.innerHTML = "";
-        document.removeEventListener("keydown", onKeyDown);
-        document.documentElement.classList.remove("no-scroll");
-      },
-      { once: true },
-    );
-  }
-
-  lightbox.addEventListener("click", (event) => {
-    if (event.target.classList.contains("lightbox")) {
-      closeLightbox();
-    }
+  GLightbox({
+    touchNavigation: true,
+    loop: true,
+    autoplayVideos: true,
+    selector: "[data-gallery]",
   });
-
-  closeButton.addEventListener("click", closeLightbox);
-
-  document.querySelectorAll("[data-preview]").forEach((el) => {
-    el.addEventListener("click", () => {
-      document.addEventListener("keydown", onKeyDown);
-      document.documentElement.classList.add("no-scroll");
-      lightbox.classList.toggle("visible");
-
-      if (el.dataset.preview === "video") {
-        const iframe = createIframe(el.dataset.id);
-        content.appendChild(iframe);
-        iframe.onload = () => lightbox.classList.toggle("ready");
-        return;
-      }
-
-      const image = createImage({ alt: el.alt, ...el.dataset });
-      content.appendChild(image);
-      image.onload = () => lightbox.classList.toggle("ready");
-    });
-  });
-
-  function onKeyDown(event) {
-    if (event.key === "Escape") {
-      closeLightbox();
-    }
-  }
-}
-
-function createIframe(id) {
-  const iframe = document.createElement("iframe");
-  iframe.src = `https://www.youtube.com/embed/${id}`;
-  iframe.title = "YouTube video player";
-  iframe.allow =
-    "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
-  iframe.referrerpolicy = "strict-origin-when-cross-origin";
-  iframe.allowfullscreen = true;
-  return iframe;
-}
-
-function createImage({ src, alt, isLandscape }) {
-  const image = document.createElement("img");
-  image.src = src;
-  image.alt = alt;
-  image.dataset.isLandscape = isLandscape;
-  return image;
 }
 
 function processExternalLinks() {

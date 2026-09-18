@@ -1,11 +1,12 @@
 <figure>
   <div class="media-cover-wrapper">
+    <a href="{{url}}?auto=format" data-gallery="image">
     <img
+      class="thumbnail"
       src="{{url}}?w=400&q=100&auto=format"
       alt="Preview of {{caption}}"
-      data-preview="image"
-      data-is-landscape="{{ isLandscape dimensions.aspectRatio }}"
-      data-src="{{url}}?auto=format"/>
+      data-is-landscape="{{ isLandscape dimensions.aspectRatio }}"/>
+    </a>
     <img class="preview-icon" alt="Preview" src="~/src/assets/icons/preview.svg" width="36" height="36" />
   </div>
   <figcaption>&copy; {{attribution}}</figcaption>

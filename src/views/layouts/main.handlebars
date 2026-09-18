@@ -20,11 +20,14 @@
   <link fetchpriority="high" href="~/src/assets/rosette.svg" rel="preload" as="image"/>
   {{/if}}
   {{#cover}}
-  <link fetchpriority="high" href="{{url}}?auto=format" rel="preload" as="image" data-cover/>
+  <link fetchpriority="high" href="{{url}}?auto=format" rel="preload" as="image" />
   {{/cover}}
 </head>
 
-<body class="page-{{id}} {{#if isHomepage}}page-light{{else}}page-dark{{/if}}">
+<body
+  class="page-{{id}} {{#if isHomepage}}page-light{{else}}page-dark{{/if}}"
+  {{#cover}}data-cover="{{url}}?auto=format"{{/cover}}
+  >
   {{>nav}}
   {{#if isHomepage}}
   {{>hero}}
@@ -33,7 +36,6 @@
     {{{body}}}
   </main>
   {{>footer}}
-  {{>lightbox}}
   <script type="module" src="~/src/index.js"></script>
 </body>
 
