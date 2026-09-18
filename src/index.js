@@ -135,6 +135,9 @@ function setupAnimations() {
 
 async function loadCover() {
   const coverURL = document.body.dataset.cover;
+  if (!coverURL) {
+    return;
+  }
   await preload(coverURL);
   const cover = document.querySelector(".cover");
   cover.querySelector(".image").style.backgroundImage = `url(${coverURL})`;
